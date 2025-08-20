@@ -1,0 +1,12 @@
+{
+  "name": "web-win-vue",
+  "version": "0.2.0",
+  "description": "",
+  "main": "web-win-vue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Windows","UI","Vue","WebWin","Win","Vue3"],
+  "author": "",
+  "license": "ISC"
+}
