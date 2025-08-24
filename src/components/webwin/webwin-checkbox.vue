@@ -1,5 +1,5 @@
 <template>
-  <input type="checkbox" class="ww-checkbox" :name="name" :id="name" v-model="checked" @click="$emit('click',$event)"/><label :for="name" class="ww-checkbox-label"><slot></slot></label>
+  <input type="checkbox" class="ww-checkbox" :name="name" :id="name" v-model="checked" @click="$emit('click',!$event.srcElement._modelValue)"/><label :for="name" class="ww-checkbox-label"><slot></slot></label>
 </template>
 <style scoped>
 .ww-checkbox[type="checkbox"] {
