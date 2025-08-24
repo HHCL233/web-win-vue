@@ -2,7 +2,7 @@
   "name": "vue-test",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "types": "src/components/webwin/index.ts",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
