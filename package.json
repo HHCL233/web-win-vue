@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "types": "src/components/webwin/index.ts",
+  "style": "web-win-vue/css/index.css",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
@@ -25,6 +26,7 @@
     "npm-run-all2": "^8.0.4",
     "typescript": "~5.8.0",
     "vite": "^7.0.6",
+    "vite-plugin-dts": "^4.5.4",
     "vite-plugin-vue-devtools": "^8.0.0",
     "vue-tsc": "^3.0.4"
   }
