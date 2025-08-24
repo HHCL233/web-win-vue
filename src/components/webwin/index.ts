@@ -7,10 +7,12 @@ import wininputbox from './webwin-inputbox.vue'
 import winpasswordbox from './webwin-passwordbox.vue'
 import winricheditbox from './webwin-richeditbox.vue'
 import winnotifications from './webwin-notifications.vue'
+import wincheckbox from './webwin-checkbox.vue'
+import winradio from './webwin-radio.vue'
 
-export { winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
+export { winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
+const component = [ winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
 	install(App:App) {
@@ -23,6 +25,8 @@ const WebWin = {
             App.component("winpasswordbox", winpasswordbox);
             App.component("winricheditbox", winricheditbox);
             App.component("winnotifications", winnotifications);
+            App.component("wincheckbox", wincheckbox);
+            App.component("winradio", winradio);
 		});
 	},
 };

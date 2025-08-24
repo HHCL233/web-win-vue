@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps({ name: String, title: String, text: String  })
+const props = defineProps({ name: String, title: String, text: String , img: String })
 let show = ref(false)
+let logo = ref(props.img)
 const showNotification = () => {
   show.value = !show.value
 }
@@ -20,7 +21,8 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 <template>
   <Transition name="slide-fade">
     <div class="Notification" v-if="show" @click="hide">
-      <p class="n-text n-name">{{ name }}</p>
+      <img :src="logo" style="object-fit:contain;margin-left: 16px;margin-right: 0px;display: inline-block;vertical-align:middle;width: 16px;height: 16px;"/>
+      <p class="n-name" style="display: inline-block;margin-left: 6px;">{{ name }}</p>
       <h4 class="n-text n-title">{{ title }}</h4>
       <p class="n-vulua">{{ text }}</p>
     </div>
@@ -75,5 +77,9 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 
 .Notification:active {
   transform: scale(0.925);
+}
+
+.n-name {
+    color: #ffffff;
 }
 </style>
