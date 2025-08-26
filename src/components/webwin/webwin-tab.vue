@@ -42,6 +42,7 @@ iframe {
     display: inline-block;
     width: 100%;
     height: 100%;
+    background-color: white;
 }
 .iframe-container {
     width: calc(100% - 380px);
@@ -51,7 +52,8 @@ iframe {
 }
 .container {
     display: flex;
-    height: calc(100% + 0.9px);
+    height: calc(100% - 0.9px);
+    background-color: white;
 }
 
 .fade-enter-active{
@@ -62,4 +64,21 @@ iframe {
     opacity: 0;
     transform: translateY(150px);
 }
+
+iframe::-webkit-scrollbar {
+  width: 4px;
+  height: 16px;
+  background-color: #e6e6e6;
+}
+
+iframe::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #ffffff00;
+}
+
+iframe::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #818181;
+}
+
 </style>

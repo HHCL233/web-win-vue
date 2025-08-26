@@ -17,8 +17,12 @@ const menu = ref([
 </script>
 
 <template>
-  <div class="sidebar">
-    <p class="sidebar-text">窗口</p>
+  <div>
+    <div class="sidebar">
+      <p class="sidebar-text">窗口</p>
+    </div>
+    <div style="width: calc( 100% - 380px );background-color: white;height: 36px;display: inline-block;vertical-align: top;">
+    </div>
   </div>
   <!--<winbutton>ddd1</winbutton>
   <winitem v-model="activeIndex" :items="menu" class="my-sidebar" />
@@ -33,18 +37,26 @@ const menu = ref([
 html,
 body,
 #app {
-  height: calc(100% - 1px);
+  height: calc(100% - 13px);
   margin: 0;
-  overflow: hidden;
+  background-color: #e6e6e6;
 }
 
 .sidebar {
-  width: 380px;height: 36px;display: flex;align-items: center;background-color: #e6e6e6;
+  width: 380px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #e6e6e6;
 }
 
 .sidebar-text {
   user-select: none;
-  margin-left: 16px;font-size: 16px;margin-top: 0;margin-bottom: 0;background-color:#e6e6e6;
+  margin-left: 16px;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #e6e6e6;
 }
 </style>
 <style>
@@ -76,10 +88,12 @@ body,
   #app {
     background-color: black;
   }
+
   .sidebar {
     background-color: #1b1b1b;
     user-select: none;
   }
+
   .sidebar-text {
     color: #ffffff;
     background-color: #1b1b1b;
