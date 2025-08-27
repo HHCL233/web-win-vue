@@ -22,7 +22,7 @@ const props = defineProps({
     modelValue: { type: Number, default: 0 },
     title: { type: String, default: 'itembox' }
 })
-defineEmits(['update:modelValue'])
+const emit = defineEmits(['update'])
 
 let show = ref(false)
 let modelValue1 = ref(props.modelValue);
@@ -34,7 +34,7 @@ function updateModelValue(idx) {
     show.value = false;
     modelValue1.value = idx;
     title.value = props.items[idx].name;
-    //emit('update:modelValue', idx);
+    emit('update', idx);
     setTimeout(() => {
     top.value = idx * -40
 top1.value = idx * 40 + 17.5
