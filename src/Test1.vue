@@ -4,10 +4,12 @@ import { ref } from 'vue'
 
 const childRef = ref<InstanceType<typeof winnotifications>>()
 
-// 调用子组件方法
+let progress = ref(0);
+
 const showNotification = () => {
   if (childRef.value) {
     const result = childRef.value.showNotification();
+    progress.value = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
   }
 };
 const activeIndex = ref(0)
@@ -39,6 +41,7 @@ const menu = ref([
             <winradio name="cheakbox" checked="true" @click="console.log">单选框</winradio>
             <winradio name="cheakbox" checked="true" @click="console.log">单选框</winradio>
         <winlistbox :items="menu"/>
+        <winprogressbar :progress="progress"/>
     </div>
     </div>
      <winnotifications img="https://ts2.tc.mm.bing.net/th/id/ODF.uqqGbikGC1X6ig79E3GIhw?w=32&h=32&qlt=97&pcl=fffffa&o=6&pid=1.2" ref="childRef" name="Web-Win" title="你好！" text="目前显示中文效果有点差，但是英文还可以！" @click="console.log('已经点击了')"/>

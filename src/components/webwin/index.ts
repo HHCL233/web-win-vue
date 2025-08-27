@@ -10,10 +10,11 @@ import winnotifications from './webwin-notifications.vue'
 import wincheckbox from './webwin-checkbox.vue'
 import winradio from './webwin-radio.vue'
 import winlistbox from './webwin-listbox.vue'
+import winprogressbar from './webwin-progressbar.vue'
 
-export { winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
+export { winprogressbar, winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [ winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
+const component = [ winprogressbar, winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
 	install(App:App) {
@@ -29,6 +30,7 @@ const WebWin = {
             App.component("wincheckbox", wincheckbox);
             App.component("winradio", winradio);
             App.component("winlistbox", winlistbox);
+            App.component("winprogressbar", winprogressbar);
 		});
 	},
 };
