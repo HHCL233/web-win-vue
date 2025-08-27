@@ -19,6 +19,6 @@ defineProps({
 .progress {
     background-color: #006fd0;
     height: 5px;
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0, 0, 0.00, 1.00);
 }
 </style>
