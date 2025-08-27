@@ -81,9 +81,13 @@ function showbox() {
     padding: 0;
     width: var(--sb-width, 330px);
     font-size: var(--sb-fs, 14px);
-    background-color: #ebebeb;
+    background-color: #ebebebe5;
     position: absolute;
+    backdrop-filter: blur(12.5px);
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     top: v-bind(top+'px')
+    
 }
 
 .list-box li {
@@ -92,6 +96,11 @@ function showbox() {
     display: flex;
     align-items: center;
     padding: var(--sb-pad, 10px 16px);
+    transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
+}
+
+.list-box li:active {
+    transform: scale(0.975);
 }
 
 .list-box li.active {
@@ -168,9 +177,14 @@ function showbox() {
     }
 }
 
-.v-enter-active,
-.v-leave-active {
+.v-enter-active {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
+}
+
+.v-leave-active {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    transition: all 0.075s cubic-bezier(0.05, -0.01, 0.00, 1.00);
 }
 
 .v-enter-from,
