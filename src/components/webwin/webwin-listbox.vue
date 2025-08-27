@@ -1,16 +1,16 @@
 <template>
     <div style="position: relative;">
-    <div class="list-box-button" @click="show = !show">{{ title }}</div>
-    <Transition>
-        <ul class="list-box" v-if="show">
-            <div style="overflow: auto;height: calc( 100% - 240px );">
-                <li v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
-                    @click="updateModelValue(idx)">
-                    <span class="label">{{ item.name }}</span>
-                </li>
-            </div>
-        </ul>
-    </Transition>
+        <div class="list-box-button" @click="showbox" :class="boxactive">{{ title }}</div>
+        <Transition>
+            <ul class="list-box" v-if="show">
+                <div style="overflow: auto;height: calc( 100% - 240px );">
+                    <li v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
+                        @click="updateModelValue(idx)">
+                        <span class="label">{{ item.name }}</span>
+                    </li>
+                </div>
+            </ul>
+        </Transition>
     </div>
 </template>
 
@@ -24,6 +24,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['update'])
 
+let boxactive = ref('');
 let show = ref(false)
 let modelValue1 = ref(props.modelValue);
 let title = ref(props.title);
@@ -32,18 +33,25 @@ let top1 = ref(0);
 
 function updateModelValue(idx) {
     show.value = false;
+    boxactive.value = ''
     modelValue1.value = idx;
     title.value = props.items[idx].name;
     emit('update', idx);
     setTimeout(() => {
-    top.value = idx * -40
-top1.value = idx * 40 + 17.5
-    }, 200);
+        top.value = idx * -35
+        top1.value = idx * 35 + 17.5
+    }, 100);
+}
+
+function showbox() {
+    show.value = !show.value
+    boxactive.value = show.value ? 'active' : '';
 }
 </script>
 
 <style scoped>
 .list-box-button {
+    z-index: 999;
     user-select: none;
     resize: none;
     vertical-align: middle;
@@ -65,7 +73,7 @@ top1.value = idx * 40 + 17.5
 }
 
 .list-box {
-    z-index: 999;
+    z-index: 1;
     transform-origin: 0 v-bind(top1+'px');
     user-select: none;
     list-style: none;
@@ -75,10 +83,11 @@ top1.value = idx * 40 + 17.5
     font-size: var(--sb-fs, 14px);
     background-color: #ebebeb;
     position: absolute;
-    top:v-bind(top+'px')
+    top: v-bind(top+'px')
 }
 
 .list-box li {
+    height: 15px;
     position: relative;
     display: flex;
     align-items: center;
@@ -87,6 +96,11 @@ top1.value = idx * 40 + 17.5
 
 .list-box li.active {
     background: var(--sb-hover-bg, #6db9f3);
+}
+
+.list-box-button.active {
+    background: var(--sb-hover-bg, #6db9f3);
+    outline: 2.75px solid #6db9f3;
 }
 
 .list-box li:hover {
