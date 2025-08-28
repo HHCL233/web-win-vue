@@ -35,8 +35,8 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
   border: rgba(163, 163, 163, 0) 4px solid;
   user-select: none;
   position: fixed;
-  bottom: 45px;
-  right: 12px;
+  bottom: 24px;
+  right: 24px;
   width: 400px;
   height: 150px;
   background-color: rgba(20, 20, 20, 0.95);
@@ -53,7 +53,7 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(480px);
+  transform: translateX(520px);
 }
 
 .n-text {

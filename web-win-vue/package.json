@@ -1,6 +1,7 @@
+
 {
   "name": "web-win-vue",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "",
   "main": "web-win-vue.mjs",
   "scripts": {
@@ -10,3 +11,5 @@
   "author": "",
   "license": "ISC"
 }
+
+           
