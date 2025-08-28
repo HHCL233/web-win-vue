@@ -3,10 +3,17 @@ import { watch, ref } from 'vue'
 import winitem from './webwin-item.vue'
 import wininputbox from './webwin-inputbox.vue'
 console.log(`%c✨Welcome to Web-Win-Vue-Tab✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
-const props = defineProps({ menu: Array, url: Array })
+const props = defineProps({ menu: Array, url: Array , titlebar: Boolean , titlebartext: String })
 const activeIndex = ref(0)
 const docState = ref(0)
 const url = ref(props.url[0])
+let bartitle = ref('')
+let folded = ref('')
+if (props.titlebar) {
+    bartitle.value = props.titlebartext
+} else {
+    bartitle.value = ''
+}
 
 watch(activeIndex, (newIndex) => {
     console.log('activeIndex changed:', newIndex)
@@ -15,17 +22,25 @@ watch(activeIndex, (newIndex) => {
     docState.value = docState.value === 0 ? 1 : 0
     console.log('docState:', docState.value)
 })
+
+function update(val) {
+    if (val) {
+        folded.value = ''
+    } else {
+        folded.value = 'folded'
+    }
+}
 </script>
 
 <template>
     <div class="container">
-        <winitem v-model="activeIndex" :items="menu" class="item-1" />
+        <winitem v-model="activeIndex" :items="menu" class="item-1" :bartitle="bartitle" @update="update"/>
         <Transition name="fade" mode="out-in">
-            <div v-if="docState === 0" key="state0" class="iframe-container">
-                <iframe :src="url" v-show="docState === 0" />
+            <div v-if="docState === 0" key="state0" class="iframe-container" :class="folded">
+                <iframe :src="url" v-show="docState === 0"/>
             </div>
-            <div v-else-if="docState === 1" key="state1" class="iframe-container">
-                <iframe :src="url" v-show="docState === 1" />
+            <div v-else-if="docState === 1" key="state1" class="iframe-container" :class="folded">
+                <iframe :src="url" v-show="docState === 1"/>
             </div>
         </Transition>
     </div>
@@ -44,11 +59,15 @@ iframe {
     height: 100%;
     background-color: white;
 }
+
 .iframe-container {
     width: calc(100% - 380px);
-    height: 100%;
+    height: calc( 100% + 35px);
     position: relative;
     display: inline-block;
+}
+.iframe-container.folded {
+    width: calc(100% - 55px);
 }
 .container {
     display: flex;
