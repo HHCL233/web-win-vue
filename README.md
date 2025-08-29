@@ -1,21 +1,28 @@
-# web-win-vue
+<h1 align="center">web-win-vue</h1>
 
-文档正在编写中！
+<p align="center">
+  基于 Vue3 开发的 Windows10 风格 Web 组件库
+</p>
 
-### 设置项目
 
-```sh
-npm install
-```
-
-### 进行开发
+### 安装
 
 ```sh
-npm run dev
+npm install web-win-vue --save
 ```
 
-### 用于生产
+### 使用
+
+导入:
 
 ```sh
-npm run build
+import { winbutton } from 'web-win-vue'
+import 'web-win-vue/web-win-vue.css'
 ```
+
+**详细文档正在编写中**  
+<!-- 请参阅 [文档](https://ycnjvm44jtxm.feishu.cn/wiki/YmMCwDGo5iNeS3kTCEdchPaXnCe) 。 -->
+
+## 许可证
+
+[MIT](https://github.com/HHCL233/web-win-vue/blob/master/LICENSE)
