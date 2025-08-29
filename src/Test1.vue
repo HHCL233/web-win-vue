@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import winnotifications from './components/webwin/webwin-notifications.vue'
+import type { winwindow,winnotifications } from './components/webwin';
 import { ref } from 'vue'
 
 const childRef = ref<InstanceType<typeof winnotifications>>()
