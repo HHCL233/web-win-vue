@@ -20,7 +20,7 @@ import { winbutton } from 'web-win-vue'
 import 'web-win-vue/web-win-vue.css'
 ```
 
-**详细文档正在编写中**  
+详细文档正在编写中  
 <!-- 请参阅 [文档](https://ycnjvm44jtxm.feishu.cn/wiki/YmMCwDGo5iNeS3kTCEdchPaXnCe) 。 -->
 
 ## 许可证
