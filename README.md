@@ -25,4 +25,4 @@ import 'web-win-vue/web-win-vue.css'
 
 ## 许可证
 
-[MIT](https://github.com/HHCL233/web-win-vue/blob/master/LICENSE)
+[MIT](https://github.com/HHCL233/web-win-vue/blob/main/LICENSE)
