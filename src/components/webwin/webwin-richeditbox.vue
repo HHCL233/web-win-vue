@@ -17,6 +17,7 @@
     font-size: 16px;
     vertical-align: top;
     white-space: pre-wrap;
+    
 }
 
 .uwprichrditbox:focus {

@@ -9,12 +9,13 @@ import winricheditbox from './webwin-richeditbox.vue'
 import winnotifications from './webwin-notifications.vue'
 import wincheckbox from './webwin-checkbox.vue'
 import winradio from './webwin-radio.vue'
-import winlistbox from './webwin-listbox.vue'
+import wincombobox from './webwin-combobox.vue'
 import winprogressbar from './webwin-progressbar.vue'
+import winwindow from './webwin-window.vue'
 
-export { winprogressbar, winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
+export { winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [ winprogressbar, winlistbox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
+const component = [ winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
 	install(App:App) {
@@ -29,8 +30,9 @@ const WebWin = {
             App.component("winnotifications", winnotifications);
             App.component("wincheckbox", wincheckbox);
             App.component("winradio", winradio);
-            App.component("winlistbox", winlistbox);
+            App.component("wincombobox", wincombobox);
             App.component("winprogressbar", winprogressbar);
+            App.component("winwindow", winwindow);
 		});
 	},
 };
