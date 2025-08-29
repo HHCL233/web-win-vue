@@ -5,6 +5,6 @@
           .card {
             height: 300px;
             width: 300px;
-            background: var(--primary-color, #CCCCCC);
+            background: var(--primary-color, #e4e4e4);
           }
 </style>
