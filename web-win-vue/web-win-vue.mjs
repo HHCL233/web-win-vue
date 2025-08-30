@@ -1,4 +1,4 @@
-import { createElementBlock as u, openBlock as c, renderSlot as W, defineComponent as V, ref as r, normalizeClass as v, unref as d, createElementVNode as n, toDisplayString as w, createVNode as $, Fragment as k, renderList as z, normalizeStyle as M, watch as K, Transition as C, withCtx as y, createCommentVNode as S, withDirectives as B, vShow as D, onMounted as Q, nextTick as Z, createBlock as H, vModelCheckbox as A, vModelRadio as ee, useCssVars as te, isRef as oe, createTextVNode as le } from "vue";
+import { createElementBlock as u, openBlock as c, renderSlot as W, defineComponent as V, ref as r, normalizeClass as h, unref as d, createElementVNode as n, toDisplayString as w, createVNode as $, Fragment as k, renderList as z, normalizeStyle as M, watch as K, Transition as C, withCtx as y, createCommentVNode as S, withDirectives as B, vShow as D, onMounted as Q, nextTick as Z, createBlock as H, vModelCheckbox as A, vModelRadio as ee, useCssVars as te, isRef as oe, createTextVNode as le } from "vue";
 const g = (e, l) => {
   const t = e.__vccOpts || e;
   for (const [o, i] of l)
@@ -55,10 +55,10 @@ const g = (e, l) => {
       o.value === "" ? (o.value = "folded", t("update", !1)) : (o.value = "", t("update", !0));
     }
     return (s, a) => (c(), u("ul", {
-      class: v(["side-bar", d(o)])
+      class: h(["side-bar", d(o)])
     }, [
       n("div", {
-        class: v(["sidebar", d(o)])
+        class: h(["sidebar", d(o)])
       }, [
         n("p", ae, w(e.bartitle), 1)
       ], 2),
@@ -80,12 +80,12 @@ const g = (e, l) => {
             })
           ], -1)),
           n("span", {
-            class: v(["label", d(o)])
+            class: h(["label", d(o)])
           }, null, 2)
         ]),
         n("li", {
           onClick: i,
-          class: v(["search-fold", d(o)])
+          class: h(["search-fold", d(o)])
         }, [
           a[1] || (a[1] = n("svg", {
             class: "icon",
@@ -100,36 +100,36 @@ const g = (e, l) => {
             })
           ], -1)),
           n("span", {
-            class: v(["label", d(o)])
+            class: h(["label", d(o)])
           }, null, 2)
         ], 2),
         n("div", ie, [
           $(R, {
             placeholder: "查找",
-            class: v(["inputbox", d(o)]),
+            class: h(["inputbox", d(o)]),
             style: { "margin-top": "6px", width: "320px", transition: "all 0s ease" }
           }, null, 8, ["class"])
         ]),
         n("h3", {
           style: { "margin-top": "26px", "margin-bottom": "26px", "margin-left": "18px" },
-          class: v(["title", d(o)])
+          class: h(["title", d(o)])
         }, w(e.title), 3)
       ]),
       n("div", ce, [
-        (c(!0), u(k, null, z(e.items, (h, p) => (c(), u("li", {
+        (c(!0), u(k, null, z(e.items, (v, p) => (c(), u("li", {
           key: p,
-          class: v({ active: p === e.modelValue }),
+          class: h({ active: p === e.modelValue }),
           onClick: (x) => s.$emit("update:modelValue", p)
         }, [
           a[2] || (a[2] = n("span", { class: "indicator" }, null, -1)),
           (c(), u("svg", ue, [
             n("path", {
-              d: h.icon
+              d: v.icon
             }, null, 8, de)
           ])),
           n("span", {
-            class: v(["label", d(o)])
-          }, w(h.name), 3)
+            class: h(["label", d(o)])
+          }, w(v.name), 3)
         ], 10, re))), 128))
       ])
     ], 2));
@@ -194,7 +194,7 @@ const me = {
       this.isHovered = !1, this.glowOpacity = 0;
     }
   }
-}, ve = { class: "tile-content" }, he = { class: "tile-icon" }, we = {
+}, he = { class: "tile-content" }, ve = { class: "tile-icon" }, we = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   width: "24",
@@ -202,14 +202,14 @@ const me = {
 }, fe = ["d"], _e = { class: "tile-title" };
 function ge(e, l, t, o, i, s) {
   return c(), u("div", {
-    class: v(["tile", t.size]),
+    class: h(["tile", t.size]),
     style: M(s.tileStyle),
     onMousemove: l[0] || (l[0] = (...a) => s.handleMouseMove && s.handleMouseMove(...a)),
     onMouseenter: l[1] || (l[1] = (a) => i.isHovered = !0),
     onMouseleave: l[2] || (l[2] = (...a) => s.handleMouseLeave && s.handleMouseLeave(...a))
   }, [
-    n("div", ve, [
-      n("div", he, [
+    n("div", he, [
+      n("div", ve, [
         W(e.$slots, "icon", {}, () => [
           (c(), u("svg", we, [
             n("path", {
@@ -243,7 +243,7 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
     l.titlebar ? s.value = l.titlebartext : s.value = "", K(t, (p) => {
       console.log("activeIndex changed:", p), console.log("new url:", l.url[p]), i.value = l.url[p], o.value = o.value === 0 ? 1 : 0, console.log("docState:", o.value);
     });
-    function h(p) {
+    function v(p) {
       p ? a.value = "" : a.value = "folded";
     }
     return (p, x) => (c(), u("div", xe, [
@@ -253,7 +253,7 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
         items: e.menu,
         class: "item-1",
         bartitle: d(s),
-        onUpdate: h
+        onUpdate: v
       }, null, 8, ["modelValue", "items", "bartitle"]),
       $(C, {
         name: "fade",
@@ -262,14 +262,14 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
         default: y(() => [
           o.value === 0 ? (c(), u("div", {
             key: "state0",
-            class: v(["iframe-container", d(a)])
+            class: h(["iframe-container", d(a)])
           }, [
             B(n("iframe", { src: i.value }, null, 8, be), [
               [D, o.value === 0]
             ])
           ], 2)) : o.value === 1 ? (c(), u("div", {
             key: "state1",
-            class: v(["iframe-container", d(a)])
+            class: h(["iframe-container", d(a)])
           }, [
             B(n("iframe", { src: i.value }, null, 8, ye), [
               [D, o.value === 1]
@@ -303,16 +303,16 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
     value: { type: String, default: "" },
     placeholder: { type: String, default: "" }
   },
-  emits: ["update:value", "change"],
+  emits: ["update", "change"],
   setup(e, { emit: l }) {
     const t = e, o = l, i = r(null), s = r(t.placeholder), a = r(t.value);
     Q(() => {
       i.value && (i.value.textContent = t.value || "", a.value = t.value || "");
     });
-    const h = (_) => {
+    const v = (_) => {
       if (!i.value) return;
       const f = i.value.textContent || "";
-      o("update:value", f), Z(() => {
+      o("update", f), Z(() => {
         if (i.value) {
           const m = document.createRange(), b = window.getSelection();
           m.selectNodeContents(i.value), m.collapse(!1), b?.removeAllRanges(), b?.addRange(m);
@@ -335,7 +335,7 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
       class: "uwprichrditbox",
       contenteditable: "plaintext-only",
       "data-placeholder": s.value,
-      onInput: h,
+      onInput: v,
       onFocus: p,
       onBlur: x
     }, null, 40, ke));
@@ -359,7 +359,7 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
     }
     return l({ showNotification: s }), console.log("%c✨Welcome to Web-Win-Vue-Notifications✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (h, p) => (c(), H(C, { name: "slide-fade" }, {
+  text-shadow: 0 1px 0 #0078d7;`), (v, p) => (c(), H(C, { name: "slide-fade" }, {
       default: y(() => [
         d(o) ? (c(), u("div", {
           key: 0,
@@ -449,9 +449,9 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
     const t = e, o = l;
-    let i = r(""), s = r(!1), a = r(t.modelValue), h = r(t.title), p = r(-6), x = r(6);
+    let i = r(""), s = r(!1), a = r(t.modelValue), v = r(t.title), p = r(-6), x = r(6);
     function _(m) {
-      s.value = !1, i.value = "", a.value = m, h.value = t.items[m].name, o("update", m), setTimeout(() => {
+      s.value = !1, i.value = "", a.value = m, v.value = t.items[m].name, o("update", m), setTimeout(() => {
         p.value = m * -35 - 6, x.value = m * 35 + 6;
       }, 100);
     }
@@ -460,9 +460,9 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
     }
     return (m, b) => (c(), u("div", Te, [
       n("div", {
-        class: v(["list-box-button", d(i)]),
+        class: h(["list-box-button", d(i)]),
         onClick: f
-      }, w(d(h)), 3),
+      }, w(d(v)), 3),
       $(C, null, {
         default: y(() => [
           d(s) ? (c(), u("ul", De, [
@@ -470,7 +470,7 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
             n("div", He, [
               (c(!0), u(k, null, z(e.items, (J, I) => (c(), u("li", {
                 key: I,
-                class: v({ active: I === d(a) }),
+                class: h({ active: I === d(a) }),
                 onClick: (et) => _(I)
               }, [
                 n("span", Ye, w(J.name), 1)
@@ -530,9 +530,9 @@ const X = /* @__PURE__ */ g(me, [["render", ge], ["__scopeId", "data-v-9ae9ef89"
                 W(i.$slots, "default", {}, void 0, !0)
               ]),
               n("div", je, [
-                (c(!0), u(k, null, z(e.items, (a, h) => (c(), H(N, {
+                (c(!0), u(k, null, z(e.items, (a, v) => (c(), H(N, {
                   class: "window-button",
-                  key: h,
+                  key: v,
                   onClick: s[0] || (s[0] = (p) => oe(t) ? t.value = !1 : t = !1)
                 }, {
                   default: y(() => [

@@ -64,7 +64,7 @@ const props = defineProps({
     placeholder: { type: String, default: '' }
 })
 
-const emit = defineEmits(['update:value', 'change'])
+const emit = defineEmits(['update', 'change'])
 
 const editableDiv = ref<HTMLElement | null>(null)
 const placeholder1 = ref(props.placeholder)
@@ -81,7 +81,7 @@ const handleInput = (e: Event) => {
     if (!editableDiv.value) return
     
     const text = editableDiv.value.textContent || ''
-    emit('update:value', text)
+    emit('update', text)
     
     nextTick(() => {
         if (editableDiv.value) {
