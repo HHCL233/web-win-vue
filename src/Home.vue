@@ -23,7 +23,7 @@ const menu = ref([
     icon='M12 3C6.5 3 2 6.6 2 11c0 2.1 1 4 2.6 5.4-.1.4-.4 1.6-.4 2.6 0 .5.4 1 .9 1 .2 0 .3 0 .5-.1.8-.3 2.4-1.1 3.5-1.6.9.3 1.9.5 3 .5 5.5 0 10-3.6 10-8 0-4.4-4.5-8-10-8zm0 14c-4.4 0-8-2.7-8-6s3.6-6 8-6 8 2.7 8 6-3.6 6-8 6z' />-->
   <wintab :menu="menu" titlebar="true" titlebartext="Web-Win-Vue"
     :url="['http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test', 'http://localhost:5173/#/test']"
-    style="height: calc( 100% - 0.9px );" />
+    style="height: calc( 100% - 0.9px );"></wintab>
 </template>
 
 <style>
