@@ -49,7 +49,7 @@ const menu = ref([
       <h1 style="font-weight: normal; margin-top: -2.5px; margin-bottom: 20px">主页</h1>
       <h2 style="font-weight: normal; margin-top: -2.5px; margin-bottom: 10px;font-size: 24px;">WoW</h2>
       <p style="font-size: 15px;">欢迎来到Web-Win-Vue的世界！</p>
-      <wininputbox placeholder="单行输入框" @change='console.log($event.target.value)' />
+      <wininputbox  placeholder="单行输入框" @change='console.log($event.target.value)' />
       <winpasswordbox placeholder="密码" @change='console.log($event.target.value)' />
       <winricheditbox placeholder="多行输入框" />
       <winbutton @click="showNotification()">显示通知</winbutton>

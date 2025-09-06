@@ -35,15 +35,15 @@ function update(val) {
 <template>
     <div class="container">
         <winitem v-model="activeIndex" :items="menu" class="item-1" :bartitle="bartitle" @update="update" />
-        <Transition name="fade" mode="out-in" style="margin-top: 70px;">
+        <Transition name="fade" mode="out-in">
             <div v-if="docState === 0" key="state0" class="iframe-container" :class="folded">
                 <slot>
-                    <iframe :src="url" v-show="docState === 0" />
+                    <iframe :src="url" v-show="docState === 0" style="margin-top: 70px;"/>
                 </slot>
             </div>
             <div v-else-if="docState === 1" key="state1" class="iframe-container" :class="folded">
                 <slot>
-                    <iframe :src="url" v-show="docState === 1" />
+                    <iframe :src="url" v-show="docState === 1" style="margin-top: 70px;"/>
                 </slot>
             </div>
         </Transition>
@@ -60,15 +60,16 @@ iframe {
     border: none;
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: calc( 100% - 70px);
     background-color: white;
 }
 
 .iframe-container {
     width: calc(100% - 380px);
-    height: calc(100% + 35px);
+    height: 100%;
     position: relative;
     display: inline-block;
+    overflow:auto;
 }
 
 .iframe-container.folded {
@@ -87,7 +88,7 @@ iframe {
 
 .fade-enter-from {
     opacity: 0;
-    transform: translateY(150px);
+    transform: translateY(300px);
 }
 
 iframe::-webkit-scrollbar {
