@@ -13,10 +13,11 @@ import wincombobox from './webwin-combobox.vue'
 import winprogressbar from './webwin-progressbar.vue'
 import winwindow from './webwin-window.vue'
 import wincard from './webwin-card.vue'
+import windropdown from './webwin-dropdown.vue'
 
-export { wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
+export { windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [ wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
+const component = [ windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
 	install(App:App) {
@@ -34,7 +35,8 @@ const WebWin = {
             App.component("wincombobox", wincombobox);
             App.component("winprogressbar", winprogressbar);
             App.component("winwindow", winwindow);
-            App.component("wincard",wincard)
+            App.component("wincard",wincard);
+            App.component("windropdown",windropdown)
 		});
 	},
 };

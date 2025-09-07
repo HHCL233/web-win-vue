@@ -128,7 +128,7 @@ function showbox() {
 
 
 .v-enter-active {
-    box-shadow: 0 0 30px rgba(125, 125, 125, 0.45);
+    box-shadow: 0 0 30px rgba(125, 125, 125, 0.75);
     transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
 }
 
