@@ -60,7 +60,7 @@ iframe {
     border: none;
     display: inline-block;
     width: 100%;
-    height: calc( 100% - 70px);
+    height: calc( 100% - 73.9px);
     background-color: white;
 }
 
