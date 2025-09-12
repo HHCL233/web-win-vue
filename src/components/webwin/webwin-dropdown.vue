@@ -66,7 +66,7 @@ defineExpose({ showbox })
     width: var(--sb-width, 330px);
     font-size: var(--sb-fs, 14px);
     background-color: #ebebebf3;
-    position: absolute;
+    position: fixed;
     backdrop-filter: blur(12.5px);
     left: v-bind(x + 'px');
     top: v-bind(y + 'px');

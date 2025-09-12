@@ -17,7 +17,7 @@ let progress6 = ref(50);
 let progress7 = ref(30);
 
 const handleRightClick = (e: { clientX: any; clientY: any; }) => {
-  dropdown1.value.showbox(e.clientX,e.clientY-350);
+  dropdown1.value.showbox(e.clientX,e.clientY);
 }
 const showNotification = () => {
   if (childRef.value) {
