@@ -45,8 +45,8 @@ function updateModelValue(idx) {
 const showbox = (x1, y1) => {
     show.value = !show.value
     boxactive.value = show.value ? 'active' : '';
-    x.value = x1 - 25
-    y.value = y1 - 350
+    x.value = x1
+    y.value = y1
 }
 
 defineExpose({ showbox })
