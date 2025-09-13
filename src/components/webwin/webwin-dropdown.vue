@@ -27,6 +27,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['update'])
 
+
 let x = ref(0)
 let y = ref(0)
 let boxactive = ref('');
@@ -54,7 +55,7 @@ defineExpose({ showbox })
 
 <style scoped>
 .dropdown-container {
-    position: relative;
+    transform-origin: center;
 }
 
 .dropdown {
@@ -108,16 +109,19 @@ defineExpose({ showbox })
 
 .v-enter-active {
     transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
+    position: fixed;
 }
 
 .v-leave-active {
     box-shadow: 0 0 30px rgba(125, 125, 125, 0);
-    transition: all 0.075s cubic-bezier(0.05, -0.01, 0.00, 1.00);
+    transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
+    position: fixed;
 }
 
 .v-enter-from,
 .v-leave-to {
     opacity: 0;
+    position: fixed;
 }
 </style>
     
