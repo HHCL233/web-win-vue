@@ -575,8 +575,8 @@ const Z = /* @__PURE__ */ y(Ze, [["render", et], ["__scopeId", "data-v-f3f865b5"
   emits: ["update"],
   setup(e, { expose: n, emit: t }) {
     F((h) => ({
-      "373051ff": p(s) + "px",
-      c1dd0244: p(a) + "px"
+      "1b68a8ea": p(s) + "px",
+      "5a2cd86a": p(a) + "px"
     })), console.log("%c✨Welcome to Web-Win-Vue-Item✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
@@ -586,7 +586,7 @@ const Z = /* @__PURE__ */ y(Ze, [["render", et], ["__scopeId", "data-v-f3f865b5"
       d.value = !1, v.value = "", g.value = h, x.value = o.items[h].name, i("update", h);
     }
     return n({ showbox: (h, b) => {
-      d.value = !d.value, v.value = d.value ? "active" : "", s.value = h - 25, a.value = b - 350;
+      d.value = !d.value, v.value = d.value ? "active" : "", s.value = h, a.value = b;
     } }), (h, b) => (c(), u("div", null, [
       W(S, null, {
         default: k(() => [
@@ -614,7 +614,7 @@ const Z = /* @__PURE__ */ y(Ze, [["render", et], ["__scopeId", "data-v-f3f865b5"
       })
     ]));
   }
-}, A = /* @__PURE__ */ y(at, [["__scopeId", "data-v-737d613c"]]), it = [A, Z, Q, K, J, j, P, T, H, q, L, D, U, E, G], ut = {
+}, A = /* @__PURE__ */ y(at, [["__scopeId", "data-v-75185cc0"]]), it = [A, Z, Q, K, J, j, P, T, H, q, L, D, U, E, G], ut = {
   install(e) {
     it.forEach((n) => {
       e.component("winbutton", T), e.component("winitem", H), e.component("wintile", q), e.component("wintab", L), e.component("wininputbox", D), e.component("winpasswordbox", U), e.component("winricheditbox", E), e.component("winnotifications", G), e.component("wincheckbox", P), e.component("winradio", j), e.component("wincombobox", J), e.component("winprogressbar", K), e.component("winwindow", Q), e.component("wincard", Z), e.component("windropdown", A);
