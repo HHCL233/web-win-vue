@@ -11,6 +11,13 @@
 npm install web-win-vue --save
 ```
 
+### 注意
+
+以下组件目前不为积极开发状态:
+
+- webwin-tile
+- webwin-button
+
 ### 使用
 
 导入:
@@ -20,7 +27,7 @@ import { winbutton } from 'web-win-vue'
 import 'web-win-vue/web-win-vue.css'
 ```
 
-[详细文档](https://hhcl233.github.io/web-win-vue-docs/#/) 。 
+[详细文档](https://hhcl233.github.io/web-win-vue-docs/#/)   (不完整)。 
 <!-- 请参阅 [文档](https://ycnjvm44jtxm.feishu.cn/wiki/YmMCwDGo5iNeS3kTCEdchPaXnCe) 。 -->
 
 ## 许可证
