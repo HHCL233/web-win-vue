@@ -70,6 +70,7 @@ iframe {
     position: relative;
     display: inline-block;
     overflow:auto;
+    margin-left: 24px;
 }
 
 .iframe-container.folded {

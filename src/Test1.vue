@@ -50,7 +50,7 @@ const menu = ref([
 </script>
 <template>
   <div class="background" @contextmenu.prevent="handleRightClick">
-    <div style="margin-left: 24px;">
+    <div>
       <h1 style="font-weight: normal; margin-top: -2.5px; margin-bottom: 20px">主页</h1>
       <h2 style="font-weight: normal; margin-top: -2.5px; margin-bottom: 10px;font-size: 24px;">WoW</h2>
       <p style="font-size: 15px;">欢迎来到Web-Win-Vue的世界！</p>
