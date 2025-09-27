@@ -15,8 +15,9 @@ const routes = [
   },
 ];
 // 创建路由
+const base = '/';
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(base),
   routes, // 路由配置简写形式，同 routes: routes
 });
 // 导出 router

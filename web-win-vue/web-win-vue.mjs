@@ -1,42 +1,42 @@
-import { createElementBlock as u, openBlock as c, renderSlot as $, defineComponent as I, ref as r, normalizeClass as w, unref as p, createElementVNode as l, toDisplayString as _, createVNode as W, Fragment as C, renderList as R, normalizeStyle as z, watch as ee, Transition as S, withCtx as k, createCommentVNode as M, withDirectives as N, vShow as X, onMounted as te, nextTick as oe, createBlock as Y, vModelCheckbox as le, vModelRadio as ne, useCssVars as F, isRef as O, createTextVNode as se } from "vue";
+import { createElementBlock as r, openBlock as c, renderSlot as $, defineComponent as I, ref as d, normalizeClass as h, unref as p, createElementVNode as l, toDisplayString as _, createVNode as W, Fragment as k, renderList as B, normalizeStyle as z, watch as te, Transition as M, withCtx as C, createCommentVNode as V, withDirectives as R, vShow as X, onMounted as oe, nextTick as le, createBlock as Y, vModelCheckbox as ne, vModelRadio as se, useCssVars as F, isRef as O, createTextVNode as ae } from "vue";
 const y = (e, n) => {
   const t = e.__vccOpts || e;
-  for (const [o, i] of n)
-    t[o] = i;
+  for (const [o, a] of n)
+    t[o] = a;
   return t;
-}, ae = {
+}, ie = {
   __name: "webwin-button",
   setup(e) {
     return console.log("%c✨Welcome to Web-Win-Vue-Button✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (n, t) => (c(), u("button", null, [
+  text-shadow: 0 1px 0 #0078d7;`), (n, t) => (c(), r("button", null, [
       $(n.$slots, "default", {}, void 0, !0)
     ]));
   }
-}, T = /* @__PURE__ */ y(ae, [["__scopeId", "data-v-85a8a3fa"]]), ie = ["value", "placeholder"], D = /* @__PURE__ */ I({
+}, T = /* @__PURE__ */ y(ie, [["__scopeId", "data-v-85a8a3fa"]]), ce = ["value", "placeholder"], D = /* @__PURE__ */ I({
   __name: "webwin-inputbox",
   props: { value: String, placeholder: String },
   setup(e) {
     console.log("%c✨Welcome to Web-Win-Vue-InputBox✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-    const t = r(e.placeholder);
-    return (o, i) => (c(), u("input", {
+    const t = d(e.placeholder);
+    return (o, a) => (c(), r("input", {
       type: "text",
       name: "fname",
       class: "uwpinput",
       value: e.value,
       placeholder: t.value,
-      onChange: i[0] || (i[0] = (s) => o.$emit("@change", s))
-    }, null, 40, ie));
+      onChange: a[0] || (a[0] = (s) => o.$emit("@change", s))
+    }, null, 40, ce));
   }
-}), ce = { class: "sidebar-text" }, re = { style: { width: "var(--sb-width, 350px)", margin: "auto" } }, ue = { style: { overflow: "auto", height: "calc( 100% - 240px )", "overflow-x": "hidden" } }, de = ["onClick"], pe = {
+}), re = { class: "sidebar-text" }, ue = { style: { width: "var(--sb-width, 350px)", margin: "auto" } }, de = { style: { overflow: "auto", height: "calc( 100% - 240px )", "overflow-x": "hidden" } }, pe = ["onClick"], me = {
   class: "icon",
   viewBox: "0 0 1024 1024",
   fill: "currentColor",
   "aria-hidden": "true",
   height: "16"
-}, me = ["d"], ve = {
+}, ve = ["d"], he = {
   __name: "webwin-item",
   props: {
     items: { type: Array, required: !0 },
@@ -50,24 +50,24 @@ const y = (e, n) => {
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
     const t = n;
-    let o = r("");
-    function i() {
+    let o = d("");
+    function a() {
       o.value === "" ? (o.value = "folded", t("update", !1)) : (o.value = "", t("update", !0));
     }
-    return (s, a) => (c(), u("ul", {
-      class: w(["side-bar", p(o)])
+    return (s, i) => (c(), r("ul", {
+      class: h(["side-bar", p(o)])
     }, [
       l("div", {
-        class: w(["sidebar", p(o)])
+        class: h(["sidebar", p(o)])
       }, [
-        l("p", ce, _(e.bartitle), 1)
+        l("p", re, _(e.bartitle), 1)
       ], 2),
       l("div", null, [
         l("li", {
           style: { "margin-top": "24px", width: "24px" },
-          onClick: i
+          onClick: a
         }, [
-          a[0] || (a[0] = l("svg", {
+          i[0] || (i[0] = l("svg", {
             class: "icon",
             viewBox: "0 0 1024 1024",
             fill: "currentColor",
@@ -80,14 +80,14 @@ const y = (e, n) => {
             })
           ], -1)),
           l("span", {
-            class: w(["label", p(o)])
+            class: h(["label", p(o)])
           }, null, 2)
         ]),
         l("li", {
-          onClick: i,
-          class: w(["search-fold", p(o)])
+          onClick: a,
+          class: h(["search-fold", p(o)])
         }, [
-          a[1] || (a[1] = l("svg", {
+          i[1] || (i[1] = l("svg", {
             class: "icon",
             viewBox: "0 0 1024 1024",
             fill: "currentColor",
@@ -100,45 +100,45 @@ const y = (e, n) => {
             })
           ], -1)),
           l("span", {
-            class: w(["label", p(o)])
+            class: h(["label", p(o)])
           }, null, 2)
         ], 2),
-        l("div", re, [
+        l("div", ue, [
           W(D, {
             placeholder: "查找",
-            class: w(["inputbox", p(o)]),
+            class: h(["inputbox", p(o)]),
             style: { "margin-top": "6px", width: "320px", transition: "all 0s ease" }
           }, null, 8, ["class"])
         ]),
         l("h3", {
           style: { "margin-top": "26px", "margin-bottom": "26px", "margin-left": "18px" },
-          class: w(["title", p(o)])
+          class: h(["title", p(o)])
         }, _(e.title), 3)
       ]),
-      l("div", ue, [
-        (c(!0), u(C, null, R(e.items, (v, d) => (c(), u("li", {
-          key: d,
-          class: w({ active: d === e.modelValue }),
-          onClick: (g) => s.$emit("update:modelValue", d)
+      l("div", de, [
+        (c(!0), r(k, null, B(e.items, (m, u) => (c(), r("li", {
+          key: u,
+          class: h({ active: u === e.modelValue }),
+          onClick: (f) => s.$emit("update:modelValue", u)
         }, [
-          a[2] || (a[2] = l("span", { class: "indicator" }, null, -1)),
-          (c(), u("svg", pe, [
+          i[2] || (i[2] = l("span", { class: "indicator" }, null, -1)),
+          (c(), r("svg", me, [
             l("path", {
-              d: v.icon
-            }, null, 8, me)
+              d: m.icon
+            }, null, 8, ve)
           ])),
           l("span", {
-            class: w(["label", p(o)])
-          }, _(v.name), 3)
-        ], 10, de))), 128))
+            class: h(["label", p(o)])
+          }, _(m.name), 3)
+        ], 10, pe))), 128))
       ])
     ], 2));
   }
-}, H = /* @__PURE__ */ y(ve, [["__scopeId", "data-v-30fc2437"]]);
+}, H = /* @__PURE__ */ y(he, [["__scopeId", "data-v-30fc2437"]]);
 console.log("%c✨Welcome to Web-Win-Vue-Tile✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-const he = {
+const we = {
   props: {
     size: { default: "medium" },
     color: { default: "#0078d7" },
@@ -194,28 +194,28 @@ const he = {
       this.isHovered = !1, this.glowOpacity = 0;
     }
   }
-}, we = { class: "tile-content" }, fe = { class: "tile-icon" }, _e = {
+}, _e = { class: "tile-content" }, fe = { class: "tile-icon" }, ge = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   width: "24",
   height: "24"
-}, ge = ["d"], xe = { class: "tile-title" };
-function be(e, n, t, o, i, s) {
-  return c(), u("div", {
-    class: w(["tile", t.size]),
+}, be = ["d"], xe = { class: "tile-title" };
+function ye(e, n, t, o, a, s) {
+  return c(), r("div", {
+    class: h(["tile", t.size]),
     style: z(s.tileStyle),
-    onMousemove: n[0] || (n[0] = (...a) => s.handleMouseMove && s.handleMouseMove(...a)),
-    onMouseenter: n[1] || (n[1] = (a) => i.isHovered = !0),
-    onMouseleave: n[2] || (n[2] = (...a) => s.handleMouseLeave && s.handleMouseLeave(...a))
+    onMousemove: n[0] || (n[0] = (...i) => s.handleMouseMove && s.handleMouseMove(...i)),
+    onMouseenter: n[1] || (n[1] = (i) => a.isHovered = !0),
+    onMouseleave: n[2] || (n[2] = (...i) => s.handleMouseLeave && s.handleMouseLeave(...i))
   }, [
-    l("div", we, [
+    l("div", _e, [
       l("div", fe, [
         $(e.$slots, "icon", {}, () => [
-          (c(), u("svg", _e, [
+          (c(), r("svg", ge, [
             l("path", {
               fill: "white",
               d: t.icon
-            }, null, 8, ge)
+            }, null, 8, be)
           ]))
         ], !0)
       ]),
@@ -231,60 +231,60 @@ function be(e, n, t, o, i, s) {
     }, null, 4)
   ], 38);
 }
-const q = /* @__PURE__ */ y(he, [["render", be], ["__scopeId", "data-v-9ae9ef89"]]), ye = { class: "container" }, $e = ["src"], ke = ["src"], L = {
+const q = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"]]), $e = { class: "container" }, ke = ["src"], Ce = ["src"], L = {
   __name: "webwin-tab",
   props: { menu: Array, url: Array, titlebar: Boolean, titlebartext: String },
   setup(e) {
     console.log("%c✨Welcome to Web-Win-Vue-Tab✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-    const n = e, t = r(0), o = r(0), i = r(n.url[0]);
-    let s = r(""), a = r("");
-    n.titlebar ? s.value = n.titlebartext : s.value = "", ee(t, (d) => {
-      console.log("activeIndex changed:", d), console.log("new url:", n.url[d]), i.value = n.url[d], o.value = o.value === 0 ? 1 : 0, console.log("docState:", o.value);
+    const n = e, t = d(0), o = d(0), a = d(n.url[0]);
+    let s = d(""), i = d("");
+    n.titlebar ? s.value = n.titlebartext : s.value = "", te(t, (u) => {
+      console.log("activeIndex changed:", u), console.log("new url:", n.url[u]), a.value = n.url[u], o.value = o.value === 0 ? 1 : 0, console.log("docState:", o.value);
     });
-    function v(d) {
-      d ? a.value = "" : a.value = "folded";
+    function m(u) {
+      u ? i.value = "" : i.value = "folded";
     }
-    return (d, g) => (c(), u("div", ye, [
+    return (u, f) => (c(), r("div", $e, [
       W(H, {
         modelValue: t.value,
-        "onUpdate:modelValue": g[0] || (g[0] = (x) => t.value = x),
+        "onUpdate:modelValue": f[0] || (f[0] = (b) => t.value = b),
         items: e.menu,
         class: "item-1",
         bartitle: p(s),
-        onUpdate: v
+        onUpdate: m
       }, null, 8, ["modelValue", "items", "bartitle"]),
-      W(S, {
+      W(M, {
         name: "fade",
         mode: "out-in"
       }, {
-        default: k(() => [
-          o.value === 0 ? (c(), u("div", {
+        default: C(() => [
+          o.value === 0 ? (c(), r("div", {
             key: "state0",
-            class: w(["iframe-container", p(a)])
+            class: h(["iframe-container", p(i)])
           }, [
-            $(d.$slots, "default", {}, () => [
-              N(l("iframe", {
-                src: i.value,
+            $(u.$slots, "default", {}, () => [
+              R(l("iframe", {
+                src: a.value,
                 style: { "margin-top": "70px" }
-              }, null, 8, $e), [
+              }, null, 8, ke), [
                 [X, o.value === 0]
               ])
             ])
-          ], 2)) : o.value === 1 ? (c(), u("div", {
+          ], 2)) : o.value === 1 ? (c(), r("div", {
             key: "state1",
-            class: w(["iframe-container", p(a)])
+            class: h(["iframe-container", p(i)])
           }, [
-            $(d.$slots, "default", {}, () => [
-              N(l("iframe", {
-                src: i.value,
+            $(u.$slots, "default", {}, () => [
+              R(l("iframe", {
+                src: a.value,
                 style: { "margin-top": "70px" }
-              }, null, 8, ke), [
+              }, null, 8, Ce), [
                 [X, o.value === 1]
               ])
             ])
-          ], 2)) : M("", !0)
+          ], 2)) : V("", !0)
         ]),
         _: 3
       })
@@ -297,17 +297,17 @@ const q = /* @__PURE__ */ y(he, [["render", be], ["__scopeId", "data-v-9ae9ef89"
     console.log("%c✨Welcome to Web-Win-Vue-PasswordBox✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-    const n = e, t = r(n.value), o = r(n.placeholder);
-    return (i, s) => (c(), u("input", {
+    const n = e, t = d(n.value), o = d(n.placeholder);
+    return (a, s) => (c(), r("input", {
       type: "password",
       name: "fname",
       class: "uwppassword",
       value: t.value,
       placeholder: o.value,
-      onChange: s[0] || (s[0] = (a) => i.$emit("@change", a))
+      onChange: s[0] || (s[0] = (i) => a.$emit("@change", i))
     }, null, 40, We));
   }
-}), Ce = ["data-placeholder"], E = /* @__PURE__ */ I({
+}), Ve = ["data-placeholder"], E = /* @__PURE__ */ I({
   __name: "webwin-richeditbox",
   props: {
     value: { type: String, default: "" },
@@ -315,135 +315,135 @@ const q = /* @__PURE__ */ y(he, [["render", be], ["__scopeId", "data-v-9ae9ef89"
   },
   emits: ["update", "change"],
   setup(e, { emit: n }) {
-    const t = e, o = n, i = r(null), s = r(t.placeholder), a = r(t.value);
-    te(() => {
-      i.value && (i.value.textContent = t.value || "", a.value = t.value || "");
+    const t = e, o = n, a = d(null), s = d(t.placeholder), i = d(t.value);
+    oe(() => {
+      a.value && (a.value.textContent = t.value || "", i.value = t.value || "");
     });
-    const v = (x) => {
-      if (!i.value) return;
-      const f = i.value.textContent || "";
-      o("update", f), oe(() => {
-        if (i.value) {
-          const m = document.createRange(), h = window.getSelection();
-          m.selectNodeContents(i.value), m.collapse(!1), h?.removeAllRanges(), h?.addRange(m);
+    const m = (b) => {
+      if (!a.value) return;
+      const g = a.value.textContent || "";
+      o("update", g), le(() => {
+        if (a.value) {
+          const v = document.createRange(), w = window.getSelection();
+          v.selectNodeContents(a.value), v.collapse(!1), w?.removeAllRanges(), w?.addRange(v);
         }
       });
-    }, d = (x) => {
-      const f = x.target;
-      f.textContent === t.placeholder && (f.textContent = "");
-    }, g = (x) => {
-      const f = x.target, m = f.textContent || "";
-      m !== a.value && (o("change", {
+    }, u = (b) => {
+      const g = b.target;
+      g.textContent === t.placeholder && (g.textContent = "");
+    }, f = (b) => {
+      const g = b.target, v = g.textContent || "";
+      v !== i.value && (o("change", {
         target: {
-          value: m
+          value: v
         }
-      }), a.value = m), m.trim() === "" && (f.textContent = "");
+      }), i.value = v), v.trim() === "" && (g.textContent = "");
     };
-    return (x, f) => (c(), u("div", {
+    return (b, g) => (c(), r("div", {
       ref_key: "editableDiv",
-      ref: i,
+      ref: a,
       class: "uwprichrditbox",
       contenteditable: "plaintext-only",
       "data-placeholder": s.value,
-      onInput: v,
-      onFocus: d,
-      onBlur: g
-    }, null, 40, Ce));
+      onInput: m,
+      onFocus: u,
+      onBlur: f
+    }, null, 40, Ve));
   }
-}), Ve = ["src"], Se = {
+}), Se = ["src"], Me = {
   class: "n-name",
   style: { display: "inline-block", "margin-left": "6px" }
-}, Me = { class: "n-text n-title" }, Ie = { class: "n-vulua" }, G = {
+}, Ie = { class: "n-text n-title" }, Be = { class: "n-vulua" }, G = {
   __name: "webwin-notifications",
   props: { name: String, title: String, text: String, img: String },
   setup(e, { expose: n }) {
     const t = e;
-    let o = r(!1), i = r(t.img);
+    let o = d(!1), a = d(t.img);
     const s = () => {
       o.value = !o.value;
     };
-    function a() {
+    function i() {
       o.value && setTimeout(() => {
         o.value = !1;
       }, 250);
     }
     return n({ showNotification: s }), console.log("%c✨Welcome to Web-Win-Vue-Notifications✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (v, d) => (c(), Y(S, { name: "slide-fade" }, {
-      default: k(() => [
-        p(o) ? (c(), u("div", {
+  text-shadow: 0 1px 0 #0078d7;`), (m, u) => (c(), Y(M, { name: "slide-fade" }, {
+      default: C(() => [
+        p(o) ? (c(), r("div", {
           key: 0,
           class: "Notification",
-          onClick: a
+          onClick: i
         }, [
           l("img", {
-            src: p(i),
+            src: p(a),
             style: { "object-fit": "contain", "margin-left": "16px", "margin-right": "0px", display: "inline-block", "vertical-align": "middle", width: "16px", height: "16px" }
-          }, null, 8, Ve),
-          l("p", Se, _(e.name), 1),
-          l("h4", Me, _(e.title), 1),
-          l("p", Ie, _(e.text), 1)
-        ])) : M("", !0)
+          }, null, 8, Se),
+          l("p", Me, _(e.name), 1),
+          l("h4", Ie, _(e.title), 1),
+          l("p", Be, _(e.text), 1)
+        ])) : V("", !0)
       ]),
       _: 1
     }));
   }
-}, Be = ["name", "id"], ze = ["for"], Ne = /* @__PURE__ */ I({
+}, Ne = ["name", "id"], ze = ["for"], Re = /* @__PURE__ */ I({
   __name: "webwin-checkbox",
   props: { name: String, checked: Array },
   setup(e) {
-    const n = e, t = r(n.name), o = r(n.checked);
+    const n = e, t = d(n.name), o = d(n.checked);
     return console.log("%c✨Welcome to Web-Win-Vue-Checkbox✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (i, s) => (c(), u(C, null, [
-      N(l("input", {
+  text-shadow: 0 1px 0 #0078d7;`), (a, s) => (c(), r(k, null, [
+      R(l("input", {
         type: "checkbox",
         class: "ww-checkbox",
         name: t.value,
         id: t.value,
-        "onUpdate:modelValue": s[0] || (s[0] = (a) => o.value = a),
-        onClick: s[1] || (s[1] = (a) => i.$emit("click", a))
-      }, null, 8, Be), [
-        [le, o.value]
+        "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i),
+        onClick: s[1] || (s[1] = (i) => a.$emit("click", i))
+      }, null, 8, Ne), [
+        [ne, o.value]
       ]),
       l("label", {
         for: t.value,
         class: "ww-checkbox-label"
       }, [
-        $(i.$slots, "default", {}, void 0, !0)
+        $(a.$slots, "default", {}, void 0, !0)
       ], 8, ze)
     ], 64));
   }
-}), P = /* @__PURE__ */ y(Ne, [["__scopeId", "data-v-c289ea76"]]), Re = ["name", "id"], Te = ["for"], De = /* @__PURE__ */ I({
+}), P = /* @__PURE__ */ y(Re, [["__scopeId", "data-v-c289ea76"]]), Te = ["name", "id"], De = ["for"], He = /* @__PURE__ */ I({
   __name: "webwin-radio",
   props: { name: String, checked: Array },
   setup(e) {
-    const n = e, t = r(n.name), o = r(n.checked);
+    const n = e, t = d(n.name), o = d(n.checked);
     return console.log("%c✨Welcome to Web-Win-Vue-radio✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (i, s) => (c(), u(C, null, [
-      N(l("input", {
+  text-shadow: 0 1px 0 #0078d7;`), (a, s) => (c(), r(k, null, [
+      R(l("input", {
         type: "radio",
         class: "ww-radio",
         name: t.value,
         id: t.value,
-        "onUpdate:modelValue": s[0] || (s[0] = (a) => o.value = a),
-        onClick: s[1] || (s[1] = (a) => i.$emit("click", a))
-      }, null, 8, Re), [
-        [ne, o.value]
+        "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i),
+        onClick: s[1] || (s[1] = (i) => a.$emit("click", i))
+      }, null, 8, Te), [
+        [se, o.value]
       ]),
       l("label", {
         for: t.value,
         class: "ww-radio-label"
       }, [
-        $(i.$slots, "default", {}, void 0, !0)
-      ], 8, Te)
+        $(a.$slots, "default", {}, void 0, !0)
+      ], 8, De)
     ], 64));
   }
-}), j = /* @__PURE__ */ y(De, [["__scopeId", "data-v-78978c8c"]]), He = { style: { position: "relative" } }, Xe = {
+}), j = /* @__PURE__ */ y(He, [["__scopeId", "data-v-78978c8c"]]), Xe = { style: { position: "relative" } }, Ye = {
   key: 0,
   class: "list-box"
-}, Ye = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, Fe = ["onClick"], Oe = { class: "label" }, qe = {
+}, Fe = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, Oe = ["onClick"], qe = { class: "label" }, Le = {
   __name: "webwin-combobox",
   props: {
     items: { type: Array, required: !0 },
@@ -452,48 +452,48 @@ const q = /* @__PURE__ */ y(he, [["render", be], ["__scopeId", "data-v-9ae9ef89"
   },
   emits: ["update"],
   setup(e, { emit: n }) {
-    F((m) => ({
-      "10c6d247": p(g) + "px",
-      "209dc3e4": p(d) + "px"
+    F((v) => ({
+      "10c6d247": p(f) + "px",
+      "209dc3e4": p(u) + "px"
     })), console.log("%c✨Welcome to Web-Win-Vue-Item✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
     const t = e, o = n;
-    let i = r(""), s = r(!1), a = r(t.modelValue), v = r(t.title), d = r(-6), g = r(6);
-    function x(m) {
-      s.value = !1, i.value = "", a.value = m, v.value = t.items[m].name, o("update", m), setTimeout(() => {
-        d.value = m * -35 - 6, g.value = m * 35 + 6;
+    let a = d(""), s = d(!1), i = d(t.modelValue), m = d(t.title), u = d(-6), f = d(6);
+    function b(v) {
+      s.value = !1, a.value = "", i.value = v, m.value = t.items[v].name, o("update", v), setTimeout(() => {
+        u.value = v * -35 - 6, f.value = v * 35 + 6;
       }, 100);
     }
-    function f() {
-      s.value = !s.value, i.value = s.value ? "active" : "";
+    function g() {
+      s.value = !s.value, a.value = s.value ? "active" : "";
     }
-    return (m, h) => (c(), u("div", He, [
+    return (v, w) => (c(), r("div", Xe, [
       l("div", {
-        class: w(["list-box-button", p(i)]),
-        onClick: f
-      }, _(p(v)), 3),
-      W(S, null, {
-        default: k(() => [
-          p(s) ? (c(), u("ul", Xe, [
-            h[0] || (h[0] = l("div", { style: { height: "6px" } }, null, -1)),
-            l("div", Ye, [
-              (c(!0), u(C, null, R(e.items, (b, V) => (c(), u("li", {
-                key: V,
-                class: w({ active: V === p(a) }),
-                onClick: (B) => x(V)
+        class: h(["list-box-button", p(a)]),
+        onClick: g
+      }, _(p(m)), 3),
+      W(M, null, {
+        default: C(() => [
+          p(s) ? (c(), r("ul", Ye, [
+            w[0] || (w[0] = l("div", { style: { height: "6px" } }, null, -1)),
+            l("div", Fe, [
+              (c(!0), r(k, null, B(e.items, (x, S) => (c(), r("li", {
+                key: S,
+                class: h({ active: S === p(i) }),
+                onClick: (N) => b(S)
               }, [
-                l("span", Oe, _(b.name), 1)
-              ], 10, Fe))), 128))
+                l("span", qe, _(x.name), 1)
+              ], 10, Oe))), 128))
             ]),
-            h[1] || (h[1] = l("div", { style: { height: "6px" } }, null, -1))
-          ])) : M("", !0)
+            w[1] || (w[1] = l("div", { style: { height: "6px" } }, null, -1))
+          ])) : V("", !0)
         ]),
         _: 1
       })
     ]));
   }
-}, J = /* @__PURE__ */ y(qe, [["__scopeId", "data-v-846b2b4f"]]), Le = { class: "progress-bar" }, Ue = {
+}, J = /* @__PURE__ */ y(Le, [["__scopeId", "data-v-846b2b4f"]]), Ue = { class: "progress-bar" }, Ee = {
   __name: "webwin-progressbar",
   props: {
     progress: { type: Number, default: 0 }
@@ -501,128 +501,155 @@ const q = /* @__PURE__ */ y(he, [["render", be], ["__scopeId", "data-v-9ae9ef89"
   setup(e) {
     return console.log("%c✨Welcome to Web-Win-Vue-ProgressBar✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (n, t) => (c(), u("div", Le, [
+  text-shadow: 0 1px 0 #0078d7;`), (n, t) => (c(), r("div", Ue, [
       l("div", {
         class: "progress",
         style: z({ width: e.progress + "%" })
       }, null, 4)
     ]));
   }
-}, K = /* @__PURE__ */ y(Ue, [["__scopeId", "data-v-18bec619"]]), Ee = {
+}, K = /* @__PURE__ */ y(Ee, [["__scopeId", "data-v-18bec619"]]), Ge = {
   key: 0,
   class: "window-background"
-}, Ge = {
+}, Pe = {
   key: 0,
   class: "window"
-}, Pe = { style: { "margin-top": "24px", "margin-bottom": "24px" } }, je = { class: "window-title" }, Je = { style: { "margin-left": "25px", "margin-right": "24px", width: "calc(100% - 48px)" } }, Ke = { style: { "margin-left": "24px", "margin-right": "24px", width: "calc(100% - 48px)", display: "Flex", gap: "6px", "margin-top": "48px" } }, Qe = {
+}, je = { style: { "margin-top": "24px", "margin-bottom": "24px" } }, Je = { class: "window-title" }, Ke = { style: { "margin-left": "25px", "margin-right": "24px", width: "calc(100% - 48px)" } }, Qe = { style: { "margin-left": "24px", "margin-right": "24px", width: "calc(100% - 48px)", display: "Flex", gap: "6px", "margin-top": "48px" } }, Ze = {
   __name: "webwin-window",
   props: {
     items: { type: Array, required: !0, default: [{ text: "11" }, { text: "11" }] },
     title: { type: String, default: "Title" }
   },
   setup(e, { expose: n }) {
-    let t = r("");
+    let t = d("");
     return n({ showDialog: () => {
       t.value = !0;
-    } }), (i, s) => (c(), u(C, null, [
-      W(S, null, {
-        default: k(() => [
-          p(t) ? (c(), u("div", Ee)) : M("", !0)
+    } }), (a, s) => (c(), r(k, null, [
+      W(M, null, {
+        default: C(() => [
+          p(t) ? (c(), r("div", Ge)) : V("", !0)
         ]),
         _: 1
       }),
-      W(S, null, {
-        default: k(() => [
-          p(t) ? (c(), u("div", Ge, [
-            l("div", Pe, [
-              l("h2", je, _(e.title), 1),
-              l("div", Je, [
-                $(i.$slots, "default", {}, void 0, !0)
-              ]),
+      W(M, null, {
+        default: C(() => [
+          p(t) ? (c(), r("div", Pe, [
+            l("div", je, [
+              l("h2", Je, _(e.title), 1),
               l("div", Ke, [
-                (c(!0), u(C, null, R(e.items, (a, v) => (c(), Y(T, {
+                $(a.$slots, "default", {}, void 0, !0)
+              ]),
+              l("div", Qe, [
+                (c(!0), r(k, null, B(e.items, (i, m) => (c(), Y(T, {
                   class: "window-button",
-                  key: v,
-                  onClick: s[0] || (s[0] = (d) => O(t) ? t.value = !1 : t = !1)
+                  key: m,
+                  onClick: s[0] || (s[0] = (u) => O(t) ? t.value = !1 : t = !1)
                 }, {
-                  default: k(() => [
-                    se(_(a.text), 1)
+                  default: C(() => [
+                    ae(_(i.text), 1)
                   ]),
                   _: 2
                 }, 1024))), 128))
               ])
             ])
-          ])) : M("", !0)
+          ])) : V("", !0)
         ]),
         _: 3
       })
     ], 64));
   }
-}, Q = /* @__PURE__ */ y(Qe, [["__scopeId", "data-v-925d7c12"]]), Ze = {}, Ae = { class: "card" };
-function et(e, n) {
-  return c(), u("div", Ae, [
+}, Q = /* @__PURE__ */ y(Ze, [["__scopeId", "data-v-925d7c12"]]), Ae = {}, et = { class: "card" };
+function tt(e, n) {
+  return c(), r("div", et, [
     $(e.$slots, "default", {}, void 0, !0)
   ]);
 }
-const Z = /* @__PURE__ */ y(Ze, [["render", et], ["__scopeId", "data-v-f3f865b5"]]), tt = {
+const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"]]), ot = {
   key: 0,
   class: "dropdown-container"
-}, ot = { class: "dropdown" }, lt = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, nt = ["onClick"], st = { class: "label" }, at = {
+}, lt = { class: "dropdown" }, nt = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, st = ["onClick"], at = { class: "label" }, it = {
   __name: "webwin-dropdown",
   props: {
     items: { type: Array, required: !0 }
   },
   emits: ["update"],
   setup(e, { expose: n, emit: t }) {
-    F((h) => ({
+    F((w) => ({
       "1b68a8ea": p(s) + "px",
-      "5a2cd86a": p(a) + "px"
+      "5a2cd86a": p(i) + "px"
     })), console.log("%c✨Welcome to Web-Win-Vue-Item✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-    const o = e, i = t;
-    let s = r(0), a = r(0), v = r(""), d = r(!1), g = r(0), x = r(o.title || "");
-    function f(h) {
-      d.value = !1, v.value = "", g.value = h, x.value = o.items[h].name, i("update", h);
+    const o = e, a = t;
+    let s = d(0), i = d(0), m = d(""), u = d(!1), f = d(0), b = d(o.title || "");
+    function g(w) {
+      u.value = !1, m.value = "", f.value = w, b.value = o.items[w].name, a("update", w);
     }
-    return n({ showbox: (h, b) => {
-      d.value = !d.value, v.value = d.value ? "active" : "", s.value = h, a.value = b;
-    } }), (h, b) => (c(), u("div", null, [
-      W(S, null, {
-        default: k(() => [
-          p(d) ? (c(), u("div", tt, [
+    return n({ showbox: (w, x) => {
+      u.value = !u.value, m.value = u.value ? "active" : "", s.value = w, i.value = x;
+    } }), (w, x) => (c(), r("div", null, [
+      W(M, null, {
+        default: C(() => [
+          p(u) ? (c(), r("div", ot, [
             l("div", {
               class: "dropdown_backgroud",
-              onClick: b[0] || (b[0] = (V) => O(d) ? d.value = !1 : d = !1)
+              onClick: x[0] || (x[0] = (S) => O(u) ? u.value = !1 : u = !1)
             }),
-            l("ul", ot, [
-              b[1] || (b[1] = l("div", { style: { height: "6px" } }, null, -1)),
-              l("div", lt, [
-                (c(!0), u(C, null, R(e.items, (V, B) => (c(), u("li", {
-                  key: B,
-                  class: w({ active: B === p(g) }),
-                  onClick: (ct) => f(B)
+            l("ul", lt, [
+              x[1] || (x[1] = l("div", { style: { height: "6px" } }, null, -1)),
+              l("div", nt, [
+                (c(!0), r(k, null, B(e.items, (S, N) => (c(), r("li", {
+                  key: N,
+                  class: h({ active: N === p(f) }),
+                  onClick: (vt) => g(N)
                 }, [
-                  l("span", st, _(V.name), 1)
-                ], 10, nt))), 128))
+                  l("span", at, _(S.name), 1)
+                ], 10, st))), 128))
               ]),
-              b[2] || (b[2] = l("div", { style: { height: "6px" } }, null, -1))
+              x[2] || (x[2] = l("div", { style: { height: "6px" } }, null, -1))
             ])
-          ])) : M("", !0)
+          ])) : V("", !0)
         ]),
         _: 1
       })
     ]));
   }
-}, A = /* @__PURE__ */ y(at, [["__scopeId", "data-v-75185cc0"]]), it = [A, Z, Q, K, J, j, P, T, H, q, L, D, U, E, G], ut = {
+}, A = /* @__PURE__ */ y(it, [["__scopeId", "data-v-75185cc0"]]), ct = { class: "tabbar" }, rt = ["onClick"], ut = { class: "label" }, dt = {
+  key: 0,
+  class: "indicator"
+}, pt = { style: { float: "right" } }, ee = {
+  __name: "webwin-topappbar",
+  props: { menu: Array, activeIndex: Number },
+  emits: ["update"],
+  setup(e) {
+    const n = e;
+    let t = d(n.activeIndex || 0), o = d(n.menu);
+    function a(s) {
+      t.value = s, emit("update", s);
+    }
+    return (s, i) => (c(), r("ul", ct, [
+      (c(!0), r(k, null, B(p(o), (m, u) => (c(), r("li", {
+        key: u,
+        class: h([{ active: u === p(t) }, "tabbar-item"]),
+        onClick: (f) => a(u)
+      }, [
+        l("span", ut, _(m.name), 1),
+        u === p(t) ? (c(), r("span", dt)) : V("", !0)
+      ], 10, rt))), 128)),
+      l("li", pt, [
+        $(s.$slots, "default")
+      ])
+    ]));
+  }
+}, mt = [ee, A, Z, Q, K, J, j, P, T, H, q, L, D, U, E, G], wt = {
   install(e) {
-    it.forEach((n) => {
-      e.component("winbutton", T), e.component("winitem", H), e.component("wintile", q), e.component("wintab", L), e.component("wininputbox", D), e.component("winpasswordbox", U), e.component("winricheditbox", E), e.component("winnotifications", G), e.component("wincheckbox", P), e.component("winradio", j), e.component("wincombobox", J), e.component("winprogressbar", K), e.component("winwindow", Q), e.component("wincard", Z), e.component("windropdown", A);
+    mt.forEach((n) => {
+      e.component("winbutton", T), e.component("winitem", H), e.component("wintile", q), e.component("wintab", L), e.component("wininputbox", D), e.component("winpasswordbox", U), e.component("winricheditbox", E), e.component("winnotifications", G), e.component("wincheckbox", P), e.component("winradio", j), e.component("wincombobox", J), e.component("winprogressbar", K), e.component("winwindow", Q), e.component("wincard", Z), e.component("windropdown", A), e.component("wintopappbar", ee);
     });
   }
 };
 export {
-  ut as default,
+  wt as default,
   T as winbutton,
   Z as wincard,
   P as wincheckbox,
@@ -637,5 +664,6 @@ export {
   E as winricheditbox,
   L as wintab,
   q as wintile,
+  ee as wintopappbar,
   Q as winwindow
 };

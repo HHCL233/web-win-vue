@@ -49,6 +49,8 @@ const menu = ref([
 ])
 </script>
 <template>
+  <wintopappbar :menu="[{'name':'刷新'},{'name':'显示设置'},{'name':'个性化'}]" >现在允许在右侧放置内容</wintopappbar>
+  <br />
   <div class="background" @contextmenu.prevent="handleRightClick">
     <div>
       <h1 style="font-weight: normal; margin-top: -2.5px; margin-bottom: 20px">主页</h1>
