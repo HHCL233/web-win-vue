@@ -4,6 +4,7 @@
             class="topappbar-item">
             <span class="topappbar-label">{{ item.name }}</span>
             <span class="topappbar-indicator" v-if="idx === modelValue1"></span>
+            <span class="topappbar-indicator-not" v-if="idx != modelValue1"></span>
         </li>
         <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="topappbar-item" style="float: right;">
             <span class="topappbar-label">{{ rightMenu.name }}</span>
@@ -45,11 +46,10 @@ function updateRight(idx) {
 
 .topappbar li {
     transform-origin: center;
-    height: 22px;
     position: relative;
     display: inline-block;
     align-items: center;
-    padding: var(--sb-pad, 10px 15px);
+    padding: var(--sb-pad, 10px 15px 0 15px);
 }
 
 .topappbar .topappbar-item:hover {
@@ -65,6 +65,15 @@ function updateRight(idx) {
 .topappbar-indicator {
     height: 2.5px;
     background-color: #006fd0;
+    width: 26px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 8px;
+}
+
+.topappbar-indicator-not {
+    height: 2.5px;
+    background-color: #006fd000;
     width: 26px;
     margin: 0 auto;
     display: block;
