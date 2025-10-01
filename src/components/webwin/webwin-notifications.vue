@@ -30,7 +30,7 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 </template>
 
 
-<style>
+<style scoped>
 .Notification {
   border: rgba(163, 163, 163, 0) 4px solid;
   user-select: none;

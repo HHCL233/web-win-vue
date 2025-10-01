@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .uwpinput {
     vertical-align: middle;
     display: inline-block;

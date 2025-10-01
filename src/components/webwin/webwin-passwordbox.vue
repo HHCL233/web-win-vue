@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .uwppassword {
     vertical-align: middle;
     display: inline-block;

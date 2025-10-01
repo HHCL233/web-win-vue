@@ -29,7 +29,7 @@ function updateRight(idx) {
     emit('update', [idx, 'right']);
 }
 </script>
-<style>
+<style scoped>
 .topappbar {
     position: sticky;
     top: 0;

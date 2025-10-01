@@ -5,7 +5,7 @@
 <script setup>
 
 </script>
-<style>
+<style scoped>
 .good {
     margin: 0 auto;
     text-align: center;

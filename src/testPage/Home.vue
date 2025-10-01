@@ -26,7 +26,7 @@ const menu = ref([
     style="height: calc( 100% - 0.9px );"></wintab>
 </template>
 
-<style>
+<style scoped>
 html,
 body,
 #app {
@@ -37,7 +37,7 @@ body,
 
 
 </style>
-<style>
+<style scoped>
 ::-webkit-scrollbar {
   width: 4px;
   height: 16px;

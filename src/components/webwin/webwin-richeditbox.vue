@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .uwprichrditbox {
     resize: none;
     vertical-align: middle;
