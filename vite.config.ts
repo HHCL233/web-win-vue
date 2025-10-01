@@ -13,7 +13,7 @@ export default defineConfig({
     // 添加dts插件配置（已移除bundle属性）
     dts({
       // 输出目录，与打包目录保持一致
-      outDir: "web-win-vue/types",
+      outDir: "packaged/types",
       // 排除不需要生成声明文件的目录
       exclude: ['node_modules/**', '**/*.test.ts', '**/*.spec.ts'],
       // 声明文件的入口根目录
@@ -25,7 +25,7 @@ export default defineConfig({
     })
   ],
   build: {
-		outDir: "web-win-vue",
+		outDir: "packaged",
 		lib: {
 			entry: path.resolve(__dirname, "./src/components/webwin/index.ts"), //指定组件编译入口文件
 			name: "web-win-vue",

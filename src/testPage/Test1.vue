@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { winwindow,winnotifications, windropdown } from './components/webwin';
+import type { winwindow,winnotifications, windropdown } from '../components/webwin';
 import { ref, onMounted, onUnmounted  } from 'vue'
 
 const childRef = ref<InstanceType<typeof winnotifications>>()

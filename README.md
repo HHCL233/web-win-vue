@@ -22,6 +22,8 @@ npm install web-win-vue --save
 
 - webwin-topappbar
 
+Github Release 目前只会在 稳定版本 发布后推送。
+
 ### 使用
 
 导入:
