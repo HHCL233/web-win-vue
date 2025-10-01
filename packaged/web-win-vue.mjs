@@ -1,4 +1,4 @@
-import { createElementBlock as r, openBlock as c, renderSlot as k, defineComponent as B, ref as u, normalizeClass as f, unref as p, createElementVNode as l, toDisplayString as g, createVNode as W, Fragment as $, renderList as M, normalizeStyle as z, watch as te, Transition as I, withCtx as C, createCommentVNode as V, withDirectives as R, vShow as X, onMounted as oe, nextTick as le, createBlock as Y, vModelCheckbox as ne, vModelRadio as se, useCssVars as F, isRef as L, createTextVNode as ae } from "vue";
+import { createElementBlock as r, openBlock as c, renderSlot as k, defineComponent as B, ref as u, normalizeClass as f, unref as p, createElementVNode as l, toDisplayString as g, createVNode as V, Fragment as $, renderList as M, normalizeStyle as z, watch as te, Transition as I, withCtx as W, createCommentVNode as C, withDirectives as R, vShow as X, onMounted as oe, nextTick as le, createBlock as Y, vModelCheckbox as ne, vModelRadio as se, useCssVars as F, isRef as L, createTextVNode as ae } from "vue";
 const y = (e, n) => {
   const o = e.__vccOpts || e;
   for (const [t, a] of n)
@@ -104,7 +104,7 @@ const y = (e, n) => {
           }, null, 2)
         ], 2),
         l("div", ue, [
-          W(D, {
+          V(D, {
             placeholder: "查找",
             class: f(["inputbox", p(t)]),
             style: { "margin-top": "6px", width: "320px", transition: "all 0s ease" }
@@ -247,7 +247,7 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
       d ? i.value = "" : i.value = "folded";
     }
     return (d, v) => (c(), r("div", $e, [
-      W(H, {
+      V(H, {
         modelValue: o.value,
         "onUpdate:modelValue": v[0] || (v[0] = (b) => o.value = b),
         items: e.menu,
@@ -255,11 +255,11 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
         bartitle: p(s),
         onUpdate: h
       }, null, 8, ["modelValue", "items", "bartitle"]),
-      W(I, {
+      V(I, {
         name: "fade",
         mode: "out-in"
       }, {
-        default: C(() => [
+        default: W(() => [
           t.value === 0 ? (c(), r("div", {
             key: "state0",
             class: f(["iframe-container", p(i)])
@@ -284,7 +284,7 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
                 [X, t.value === 1]
               ])
             ])
-          ], 2)) : V("", !0)
+          ], 2)) : C("", !0)
         ]),
         _: 3
       })
@@ -370,7 +370,7 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
     return n({ showNotification: s }), console.log("%c✨Welcome to Web-Win-Vue-Notifications✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`), (h, d) => (c(), Y(I, { name: "slide-fade" }, {
-      default: C(() => [
+      default: W(() => [
         p(t) ? (c(), r("div", {
           key: 0,
           class: "Notification",
@@ -383,7 +383,7 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
           l("p", Me, g(e.name), 1),
           l("h4", Ie, g(e.title), 1),
           l("p", Be, g(e.text), 1)
-        ])) : V("", !0)
+        ])) : C("", !0)
       ]),
       _: 1
     }));
@@ -473,8 +473,8 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
         class: f(["list-box-button", p(a)]),
         onClick: _
       }, g(p(h)), 3),
-      W(I, null, {
-        default: C(() => [
+      V(I, null, {
+        default: W(() => [
           p(s) ? (c(), r("ul", Ye, [
             w[0] || (w[0] = l("div", { style: { height: "6px" } }, null, -1)),
             l("div", Fe, [
@@ -487,7 +487,7 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
               ], 10, Le))), 128))
             ]),
             w[1] || (w[1] = l("div", { style: { height: "6px" } }, null, -1))
-          ])) : V("", !0)
+          ])) : C("", !0)
         ]),
         _: 1
       })
@@ -525,14 +525,14 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
     return n({ showDialog: () => {
       o.value = !0;
     } }), (a, s) => (c(), r($, null, [
-      W(I, null, {
-        default: C(() => [
-          p(o) ? (c(), r("div", Ge)) : V("", !0)
+      V(I, null, {
+        default: W(() => [
+          p(o) ? (c(), r("div", Ge)) : C("", !0)
         ]),
         _: 1
       }),
-      W(I, null, {
-        default: C(() => [
+      V(I, null, {
+        default: W(() => [
           p(o) ? (c(), r("div", Pe, [
             l("div", je, [
               l("h2", Je, g(e.title), 1),
@@ -545,14 +545,14 @@ const O = /* @__PURE__ */ y(we, [["render", ye], ["__scopeId", "data-v-9ae9ef89"
                   key: h,
                   onClick: s[0] || (s[0] = (d) => L(o) ? o.value = !1 : o = !1)
                 }, {
-                  default: C(() => [
+                  default: W(() => [
                     ae(g(i.text), 1)
                   ]),
                   _: 2
                 }, 1024))), 128))
               ])
             ])
-          ])) : V("", !0)
+          ])) : C("", !0)
         ]),
         _: 3
       })
@@ -588,8 +588,8 @@ const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"
     return n({ showbox: (w, x) => {
       d.value = !d.value, h.value = d.value ? "active" : "", s.value = w, i.value = x;
     } }), (w, x) => (c(), r("div", null, [
-      W(I, null, {
-        default: C(() => [
+      V(I, null, {
+        default: W(() => [
           p(d) ? (c(), r("div", ot, [
             l("div", {
               class: "dropdown_backgroud",
@@ -601,14 +601,14 @@ const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"
                 (c(!0), r($, null, M(e.items, (S, N) => (c(), r("li", {
                   key: N,
                   class: f({ active: N === p(v) }),
-                  onClick: (ht) => _(N)
+                  onClick: (wt) => _(N)
                 }, [
                   l("span", at, g(S.name), 1)
                 ], 10, st))), 128))
               ]),
               x[2] || (x[2] = l("div", { style: { height: "6px" } }, null, -1))
             ])
-          ])) : V("", !0)
+          ])) : C("", !0)
         ]),
         _: 1
       })
@@ -617,7 +617,10 @@ const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"
 }, A = /* @__PURE__ */ y(it, [["__scopeId", "data-v-75185cc0"]]), ct = { class: "topappbar" }, rt = ["onClick"], ut = { class: "topappbar-label" }, dt = {
   key: 0,
   class: "topappbar-indicator"
-}, pt = ["onClick"], mt = { class: "topappbar-label" }, ee = {
+}, pt = {
+  key: 1,
+  class: "topappbar-indicator-not"
+}, mt = ["onClick"], vt = { class: "topappbar-label" }, ee = {
   __name: "webwin-topappbar",
   props: { items: Array, activeIndex: Number, rightMenu: { type: Array, default: [] } },
   emits: ["update"],
@@ -637,7 +640,8 @@ const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"
         onClick: (w) => h(m)
       }, [
         l("span", ut, g(_.name), 1),
-        m === p(a) ? (c(), r("span", dt)) : V("", !0)
+        m === p(a) ? (c(), r("span", dt)) : C("", !0),
+        m != p(a) ? (c(), r("span", pt)) : C("", !0)
       ], 10, rt))), 128)),
       (c(!0), r($, null, M(p(i), (_, m) => (c(), r("li", {
         key: m,
@@ -645,19 +649,19 @@ const Z = /* @__PURE__ */ y(Ae, [["render", tt], ["__scopeId", "data-v-f3f865b5"
         class: "topappbar-item",
         style: { float: "right" }
       }, [
-        l("span", mt, g(_.name), 1)
-      ], 8, pt))), 128))
+        l("span", vt, g(_.name), 1)
+      ], 8, mt))), 128))
     ]));
   }
-}, vt = [ee, A, Z, Q, K, J, j, P, T, H, O, q, D, U, E, G], _t = {
+}, ht = [ee, A, Z, Q, K, J, j, P, T, H, O, q, D, U, E, G], ft = {
   install(e) {
-    vt.forEach((n) => {
+    ht.forEach((n) => {
       e.component("winbutton", T), e.component("winitem", H), e.component("wintile", O), e.component("wintab", q), e.component("wininputbox", D), e.component("winpasswordbox", U), e.component("winricheditbox", E), e.component("winnotifications", G), e.component("wincheckbox", P), e.component("winradio", j), e.component("wincombobox", J), e.component("winprogressbar", K), e.component("winwindow", Q), e.component("wincard", Z), e.component("windropdown", A), e.component("wintopappbar", ee);
     });
   }
 };
 export {
-  _t as default,
+  ft as default,
   T as winbutton,
   Z as wincard,
   P as wincheckbox,
