@@ -77,6 +77,7 @@ const menu = ref([
       <windropdown :items="[{'name':'刷新'},{'name':'显示设置'},{'name':'个性化'}]" ref="dropdown1"></windropdown>
       aaaaaaaaaaaaaa
       aaaaaaaaaaaaaaaa<br>aaaaa</br>
+      <winrange></winrange>
     </div>
   </div>
   <winnotifications
