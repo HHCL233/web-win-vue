@@ -54,23 +54,14 @@ function showbox() {
 <style scoped>
 .list-box-button {
     z-index: 10;
-    user-select: none;
-    resize: none;
-    vertical-align: middle;
-    display: inline-block;
-    min-width: 300px;
-    outline: 3px solid #999999;
-    outline-offset: -3px;
     height: 15px;
-    font-size: 15px;
-    cursor: default;
-    padding: 10px 15px;
-    background: var(--primary-color, rgb(255, 255, 255));
-    color: rgb(0, 0, 0);
-    border: none;
-    vertical-align: top;
-    white-space: pre-wrap;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: var(--sb-pad, 10px 15px);
+    box-shadow: 0px 0px 0px 2px #999999 inset;
+    width: 300px;
+    background-color: white;
 }
 
 .list-box {
@@ -110,7 +101,7 @@ function showbox() {
 
 .list-box-button.active {
     background: var(--sb-hover-bg, #6db9f3);
-    outline: 3px solid #6db9f3;
+    box-shadow: 0px 0px 0px 2px #6db9f3 inset;
 }
 
 .list-box li:hover {
