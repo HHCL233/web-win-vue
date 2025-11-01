@@ -6,7 +6,8 @@
             <span class="topappbar-indicator" v-if="idx === modelValue1"></span>
             <span class="topappbar-indicator-not" v-if="idx != modelValue1"></span>
         </li>
-        <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="topappbar-item" style="float: right;">
+        <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="topappbar-item"
+            style="float: right;">
             <span class="topappbar-label">{{ rightMenu.name }}</span>
         </li>
     </ul>
@@ -37,8 +38,8 @@ function updateRight(idx) {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: var(--sb-width, 330px);
-    font-size: var(--sb-fs, 14px);
+    width: 330px;
+    font-size: 14px;
     background-color: #ebebebf3;
     backdrop-filter: blur(12.5px);
     width: 100%;
@@ -49,15 +50,15 @@ function updateRight(idx) {
     position: relative;
     display: inline-block;
     align-items: center;
-    padding: var(--sb-pad, 10px 15px 0 15px);
+    padding: 10px 15px 0 15px;
 }
 
 .topappbar .topappbar-item:hover {
-    background: var(--sb-hover-bg, #cecece);
+    background: #cecece;
 }
 
 .topappbar-label {
-    color: var(--sb-topappbar-label-color, #333);
+    color: #333;
     white-space: nowrap;
     font-size: 16px;
 }
@@ -78,5 +79,25 @@ function updateRight(idx) {
     margin: 0 auto;
     display: block;
     margin-top: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .topappbar {
+        background-color: #363636;
+        color: #ffffff;
+    }
+
+    .topappbar .topappbar-item:hover {
+        background: #252525;
+        color: #ffffff;
+    }
+
+    .topappbar-label {
+        color: #ffffff;
+    }
+
+    .topappbar-indicator {
+        background-color: #4b99da;
+    }
 }
 </style>

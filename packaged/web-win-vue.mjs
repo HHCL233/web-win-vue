@@ -440,7 +440,7 @@ const O = /* @__PURE__ */ g(xe, [["render", Ve], ["__scopeId", "data-v-9ae9ef89"
       ], 8, qe)
     ], 64));
   }
-}), j = /* @__PURE__ */ g(Ee, [["__scopeId", "data-v-78978c8c"]]), Ge = { style: { position: "relative" } }, Pe = {
+}), j = /* @__PURE__ */ g(Ee, [["__scopeId", "data-v-6df73cdd"]]), Ge = { style: { position: "relative" } }, Pe = {
   key: 0,
   class: "list-box"
 }, je = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, Je = ["onClick"], Ke = { class: "label" }, Qe = {
@@ -564,7 +564,7 @@ function rt(e, l) {
     k(e.$slots, "default", {}, void 0, !0)
   ]);
 }
-const Z = /* @__PURE__ */ g(it, [["render", rt], ["__scopeId", "data-v-f3f865b5"]]), ut = {
+const Z = /* @__PURE__ */ g(it, [["render", rt], ["__scopeId", "data-v-4a87dc00"]]), ut = {
   key: 0,
   class: "dropdown-container"
 }, dt = { class: "dropdown" }, pt = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, mt = ["onClick"], vt = { class: "label" }, ht = {
@@ -653,7 +653,7 @@ const Z = /* @__PURE__ */ g(it, [["render", rt], ["__scopeId", "data-v-f3f865b5"
       ], 8, xt))), 128))
     ]));
   }
-}, ee = /* @__PURE__ */ g($t, [["__scopeId", "data-v-c8bdff66"]]), kt = {
+}, ee = /* @__PURE__ */ g($t, [["__scopeId", "data-v-d499fad9"]]), kt = {
   __name: "webwin-range",
   props: /* @__PURE__ */ ce({
     color: { type: String, default: "#006fd0" }
@@ -664,7 +664,7 @@ const Z = /* @__PURE__ */ g(it, [["render", rt], ["__scopeId", "data-v-f3f865b5"
   emits: ["update:modelValue"],
   setup(e) {
     T((o) => ({
-      v103a2c75: e.color
+      v23dfb612: e.color
     }));
     let l = re(e, "modelValue");
     return (o, t) => B((c(), r("input", {
@@ -677,7 +677,7 @@ const Z = /* @__PURE__ */ g(it, [["render", rt], ["__scopeId", "data-v-f3f865b5"
       [ue, d(l)]
     ]);
   }
-}, te = /* @__PURE__ */ g(kt, [["__scopeId", "data-v-69b5a8e0"]]), Ct = [te, ee, A, Z, Q, K, J, j, P, H, Y, O, U, X, q, E, G], Mt = {
+}, te = /* @__PURE__ */ g(kt, [["__scopeId", "data-v-480ca2b0"]]), Ct = [te, ee, A, Z, Q, K, J, j, P, H, Y, O, U, X, q, E, G], Mt = {
   install(e) {
     Ct.forEach((l) => {
       e.component("winbutton", H), e.component("winitem", Y), e.component("wintile", O), e.component("wintab", U), e.component("wininputbox", X), e.component("winpasswordbox", q), e.component("winricheditbox", E), e.component("winnotifications", G), e.component("wincheckbox", P), e.component("winradio", j), e.component("wincombobox", J), e.component("winprogressbar", K), e.component("winwindow", Q), e.component("wincard", Z), e.component("windropdown", A), e.component("wintopappbar", ee), e.component("winrange", te);

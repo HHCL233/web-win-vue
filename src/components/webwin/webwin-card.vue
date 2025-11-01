@@ -1,10 +1,19 @@
 <template>
-    <div class="card"><slot></slot></div>
+  <div class="card">
+    <slot></slot>
+  </div>
 </template>
 <style scoped>
-          .card {
-            height: 300px;
-            width: 300px;
-            background: var(--primary-color, #e4e4e4);
-          }
+.card {
+  height: 300px;
+  width: 300px;
+  background: #e4e4e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
 </style>
