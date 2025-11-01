@@ -1,5 +1,8 @@
 <template>
-  <input type="radio" class="ww-radio" :name="name" :id="name" v-model="checked" @click="$emit('click',$event)"/><label :for="name" class="ww-radio-label"><slot></slot></label>
+  <input type="radio" class="ww-radio" :name="name" :id="name" v-model="checked"
+    @click="$emit('click', $event)" /><label :for="name" class="ww-radio-label">
+    <slot></slot>
+  </label>
 </template>
 <style scoped>
 .ww-radio[type="radio"] {
