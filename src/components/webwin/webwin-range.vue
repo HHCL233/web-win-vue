@@ -1,5 +1,5 @@
 <template>
-     <input type="range" v-model="model" class="webwin-slider" min="1" max="100" value="50">
+     <input type="range" v-model="model" class="webwin-slider" min="1" max="100">
 </template>
 <style scoped>
 .webwin-slider {
@@ -28,11 +28,12 @@
 
 <script setup>
 import { ref } from 'vue'
-const model = defineModel()
+let model = defineModel()
 
 const props = defineProps({
   color: { type:String, default: '#006fd0' },
 })
+
 
 
 </script>
