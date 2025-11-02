@@ -1,11 +1,13 @@
 <template>
     <ul class="topappbar">
-        <li v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }" @click="updateLeft(idx)"
-            class="topappbar-item">
-            <span class="topappbar-label">{{ item.name }}</span>
-            <span class="topappbar-indicator" v-if="idx === modelValue1"></span>
-            <span class="topappbar-indicator-not" v-if="idx != modelValue1"></span>
-        </li>
+        <KeepAlive>
+            <li :is="activeComponent" v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
+                @click="updateLeft(idx)" class="topappbar-item">
+                <span class="topappbar-label">{{ item.name }}</span>
+                <span class="topappbar-indicator" v-if="idx === modelValue1"></span>
+                <span class="topappbar-indicator-not" v-if="idx != modelValue1"></span>
+            </li>
+        </KeepAlive>
         <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="topappbar-item"
             style="float: right;">
             <span class="topappbar-label">{{ rightMenu.name }}</span>
@@ -26,7 +28,6 @@ function updateLeft(idx) {
 }
 
 function updateRight(idx) {
-    modelValue1.value = idx;
     emit('update', [idx, 'right']);
 }
 </script>

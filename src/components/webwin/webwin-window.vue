@@ -2,12 +2,17 @@
 import winbutton from './webwin-button.vue'
 import { ref } from 'vue'
 let show1 = ref('')
+const emit = defineEmits(['clickBotton'])
 defineProps({
     items: { type: Array, required: true, default: [{ 'text': '11' }, { 'text': '11' }] },
     title: { type: String, default: 'Title' }
 })
 const showDialog = () => {
-  show1.value = true
+    show1.value = true
+}
+function clickWindowsBotton(idx) {
+    show1.value = false;
+    emit('clickBotton', idx)
 }
 defineExpose({ showDialog })
 </script>
@@ -25,7 +30,7 @@ defineExpose({ showDialog })
                 <div
                     style="margin-left: 24px;margin-right: 24px;width: calc(100% - 48px);display: Flex;gap: 6px;margin-top: 48px;">
                     <winbutton class="window-button" v-for="(item, idx) in items" :key="idx"
-                        @click="show1= false">{{ item.text }}
+                        @click="clickWindowsBotton(idx)">{{ item.text }}
                     </winbutton>
                 </div>
             </div>

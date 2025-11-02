@@ -22,7 +22,7 @@ const handleRightClick = (e: { clientX: any; clientY: any; }) => {
 const showNotification = () => {
   if (childRef.value) {
     childRef.value.showNotification();
-    //window1.value.showDialog();
+    window1.value.showDialog();
     dropdown1.value.showbox(300, 100);
     progress.value = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
     progress1.value = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -73,7 +73,7 @@ const menu = ref([
       <winprogressbar :progress="progress5" />
       <winprogressbar :progress="progress6" />
       <winprogressbar :progress="progress7" />
-      <winwindow ref="window1">这是web-win-vue的弹窗!(目前按钮安排了)</winwindow>
+      <winwindow @clickBotton="console.log" ref="window1">这是web-win-vue的弹窗!(目前按钮安排了)</winwindow>
       <windropdown :items="[{ 'name': '刷新' }, { 'name': '显示设置' }, { 'name': '个性化' }]" ref="dropdown1"></windropdown>
       aaaaaaaaaaaaaa
       aaaaaaaaaaaaaaaa<br>aaaaa</br>
