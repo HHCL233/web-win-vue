@@ -1,4 +1,3 @@
-
 {
   "name": "web-win-vue",
   "version": "0.6.12",
@@ -7,9 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Windows","UI","Vue","WebWin","Win","Vue3"],
+  "keywords": [
+    "Windows",
+    "UI",
+    "Vue",
+    "WebWin",
+    "Win",
+    "Vue3"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
-
-           
