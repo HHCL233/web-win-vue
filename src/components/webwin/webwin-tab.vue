@@ -1,8 +1,6 @@
 <script setup>
 import { watch, ref } from 'vue'
 import winitem from './webwin-item.vue'
-import wininputbox from './webwin-inputbox.vue'
-console.log(`%c✨Welcome to Web-Win-Vue-Tab✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
 const props = defineProps({ menu: Array, url: Array, titlebar: Boolean, titlebartext: String })
 const activeIndex = ref(0)
 const docState = ref(0)
@@ -33,17 +31,17 @@ function update(val) {
 </script>
 
 <template>
-    <div class="container">
-        <winitem v-model="activeIndex" :items="menu" class="item-1" :bartitle="bartitle" @update="update" />
+    <div class="webwin-container">
+        <winitem v-model="activeIndex" :items="menu" class="webwin-item-1" :bartitle="bartitle" @update="update" />
         <Transition name="fade" mode="out-in">
-            <div v-if="docState === 0" key="state0" class="iframe-container" :class="folded">
+            <div v-if="docState === 0" key="state0" class="webwin-iframe-container" :class="folded">
                 <slot>
-                    <iframe :src="url" v-show="docState === 0" style="margin-top: 70px;"/>
+                    <iframe :src="url" v-show="docState === 0" style="margin-top: 70px;" class="webwin-iframe" />
                 </slot>
             </div>
-            <div v-else-if="docState === 1" key="state1" class="iframe-container" :class="folded">
+            <div v-else-if="docState === 1" key="state1" class="webwin-iframe-container" :class="folded">
                 <slot>
-                    <iframe :src="url" v-show="docState === 1" style="margin-top: 70px;"/>
+                    <iframe :src="url" v-show="docState === 1" style="margin-top: 70px;" class="webwin-iframe" />
                 </slot>
             </div>
         </Transition>
@@ -51,33 +49,33 @@ function update(val) {
 </template>
 
 <style lang="css">
-.item-1 {
+.webwin-item-1 {
     display: inline-block;
     background-color: #e6e6e6;
 }
 
-iframe {
+.webwin-iframe {
     border: none;
     display: inline-block;
     width: 100%;
-    height: calc( 100% - 73.9px);
+    height: calc(100% - 73.9px);
     background-color: white;
 }
 
-.iframe-container {
+.webwin-iframe-container {
     width: calc(100% - 380px);
     height: 100%;
     position: relative;
     display: inline-block;
-    overflow:auto;
+    overflow: auto;
     margin-left: 24px;
 }
 
-.iframe-container.folded {
+.webwin-iframe-container.folded {
     width: calc(100% - 55px);
 }
 
-.container {
+.webwin-container {
     display: flex;
     height: calc(100% - 0.9px);
     background-color: white;
@@ -92,18 +90,18 @@ iframe {
     transform: translateY(300px);
 }
 
-iframe::-webkit-scrollbar {
+.webwin-iframe::-webkit-scrollbar {
     width: 4px;
     height: 16px;
     background-color: #e6e6e6;
 }
 
-iframe::-webkit-scrollbar-track {
+.webwin-iframe::-webkit-scrollbar-track {
     border-radius: 0px;
     background-color: #ffffff00;
 }
 
-iframe::-webkit-scrollbar-thumb {
+.webwin-iframe::-webkit-scrollbar-thumb {
     border-radius: 0px;
     background-color: #818181;
 }

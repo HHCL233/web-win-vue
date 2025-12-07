@@ -19,12 +19,12 @@ import winrange from './webwin-range.vue'
 
 export { winrange, wintopappbar, windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [ winrange,wintopappbar, windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications ];
+const component = [winrange, wintopappbar, windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
-	install(App:App) {
-		component.forEach((item) => {
-			App.component("winbutton", winbutton);
+    install(App: App) {
+        component.forEach((item) => {
+            App.component("winbutton", winbutton);
             App.component("winitem", winitem);
             App.component("wintile", wintile);
             App.component("wintab", wintab);
@@ -37,12 +37,12 @@ const WebWin = {
             App.component("wincombobox", wincombobox);
             App.component("winprogressbar", winprogressbar);
             App.component("winwindow", winwindow);
-            App.component("wincard",wincard);
-            App.component("windropdown",windropdown);
-            App.component("wintopappbar",wintopappbar);
-            App.component("winrange",winrange);
-		});
-	},
+            App.component("wincard", wincard);
+            App.component("windropdown", windropdown);
+            App.component("wintopappbar", wintopappbar);
+            App.component("winrange", winrange);
+        });
+    },
 };
 
 export default WebWin;

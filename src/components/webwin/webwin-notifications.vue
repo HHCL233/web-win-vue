@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps({ name: String, title: String, text: String , img: String })
+const props = defineProps({ name: String, title: String, text: String, img: String })
 let show = ref(false)
 let logo = ref(props.img)
 const showNotification = () => {
@@ -20,18 +20,19 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 
 <template>
   <Transition name="slide-fade">
-    <div class="Notification" v-if="show" @click="hide">
-      <img :src="logo" style="object-fit:contain;margin-left: 16px;margin-right: 0px;display: inline-block;vertical-align:middle;width: 16px;height: 16px;"/>
-      <p class="n-name" style="display: inline-block;margin-left: 6px;">{{ name }}</p>
-      <h4 class="n-text n-title">{{ title }}</h4>
-      <p class="n-vulua">{{ text }}</p>
+    <div class="webwin-notification" v-if="show" @click="hide">
+      <img :src="logo"
+        style="object-fit:contain;margin-left: 16px;margin-right: 0px;display: inline-block;vertical-align:middle;width: 16px;height: 16px;" />
+      <p class="webwin-n-name" style="display: inline-block;margin-left: 6px;">{{ name }}</p>
+      <h4 class="webwin-n-text webwin-n-title">{{ title }}</h4>
+      <p class="webwin-n-vulua">{{ text }}</p>
     </div>
   </Transition>
 </template>
 
 
 <style scoped>
-.Notification {
+.webwin-notification {
   border: rgba(163, 163, 163, 0) 4px solid;
   user-select: none;
   position: fixed;
@@ -56,30 +57,30 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
   transform: translateX(520px);
 }
 
-.n-text {
+.webwin-n-text {
   color: #ffffff;
   margin-left: 16px;
 }
 
-.n-title {
+.webwin-n-title {
   margin-top: -2.5px;
 }
 
-.n-vulua {
+.webwin-n-vulua {
   margin-left: 16px;
   color: #a3a3a3;
   margin-top: -18px;
 }
 
-.Notification:hover {
+.webwin-notification:hover {
   border: #5f5f5f 4px solid;
 }
 
-.Notification:active {
+.webwin-notification:active {
   transform: scale(0.925);
 }
 
-.n-name {
-    color: #ffffff;
+.webwin-n-name {
+  color: #ffffff;
 }
 </style>

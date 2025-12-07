@@ -1,10 +1,24 @@
 {
   "name": "web-win-vue",
-  "version": "0.6.13",
-  "description": "",
-  "main": "web-win-vue.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.7.0",
+  "description": "基于 Vue3 开发的 Windows10 风格 Web 组件库",
+  "main": "web-win-vue.umd.js",
+  "module": "web-win-vue.es.js",
+  "types": "web-win-vue.d.ts",
+  "style": "style.css",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./web-win-vue.d.ts",
+      "import": "./web-win-vue.es.js",
+      "require": "./web-win-vue.umd.js"
+    },
+    "./style": "./style.css",
+    "./*": "./*"
   },
   "keywords": [
     "Windows",
@@ -14,6 +28,16 @@
     "Win",
     "Vue3"
   ],
-  "author": "",
-  "license": "MIT"
+  "author": "hhcl2333",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.5.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HHCL233/web-win-vue"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

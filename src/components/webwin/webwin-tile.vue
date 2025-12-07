@@ -1,18 +1,20 @@
 <template>
-    <div class="tile" :class="size" :style="tileStyle" @mousemove="handleMouseMove" @mouseenter="isHovered = true"
-        @mouseleave="handleMouseLeave">
-        <div class="tile-content">
-            <div class="tile-icon">
+    <div class="webwin-tile" :class="size" :style="tileStyle" @mousemove="handleMouseMove"
+        @mouseenter="isHovered = true" @mouseleave="handleMouseLeave">
+        <div class="webwin-tile-content">
+            <div class="webwin-tile-icon">
                 <slot name="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="white" :d="icon"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="white" :d="icon" />
+                    </svg>
                 </slot>
             </div>
-            <div class="tile-title">{{ title }}</div>
+            <div class="webwin-tile-title">{{ title }}</div>
         </div>
 
-        <div class="glow-border" :style="glowStyle"></div>
+        <div class="webwin-glow-border" :style="glowStyle"></div>
 
-        <div class="pointer-glow" :style="pointerGlowStyle"></div>
+        <div class="webwin-pointer-glow" :style="pointerGlowStyle"></div>
     </div>
 </template>
 
@@ -83,7 +85,7 @@ export default {
 </script>
 
 <style scoped>
-.tile {
+.webwin-tile {
     --tile-color: #0078d7;
     --glow-color: rgba(255, 255, 255, 0.459);
     --glow-radius: 20px;
@@ -95,27 +97,27 @@ export default {
     transition: all 0.25s cubic-bezier(0.78, 0.12, 0.00, 1.01);
 }
 
-.tile.small {
+.webwin-tile.small {
     width: 70px;
     height: 70px;
 }
 
-.tile.medium {
+.webwin-tile.medium {
     width: 150px;
     height: 150px;
 }
 
-.tile.wide {
+.webwin-tile.wide {
     width: 310px;
     height: 150px;
 }
 
-.tile.large {
+.webwin-tile.large {
     width: 310px;
     height: 310px;
 }
 
-.tile-content {
+.webwin-tile-content {
     position: relative;
     z-index: 2;
     height: 100%;
@@ -126,12 +128,12 @@ export default {
     padding: 10px;
 }
 
-.tile-icon {
+.webwin-tile-icon {
     font-size: 24px;
     margin-bottom: 8px;
 }
 
-.tile-title {
+.webwin-tile-title {
     user-select: none;
     font-size: 12px;
     font-weight: bold;
@@ -140,7 +142,7 @@ export default {
     left: 8px;
 }
 
-.glow-border {
+.webwin-glow-border {
     position: absolute;
     top: 0;
     left: 0;
@@ -165,7 +167,7 @@ export default {
     transition: opacity 0.2s ease;
 }
 
-.pointer-glow {
+.webwin-pointer-glow {
     position: absolute;
     top: calc(var(--y) - 50px);
     left: calc(var(--x) - 50px);
@@ -179,7 +181,8 @@ export default {
     z-index: 1;
     transition: opacity 0.3s ease;
 }
-.tile:active {
+
+.webwin-tile:active {
     transform: scale(0.9);
 }
 </style>

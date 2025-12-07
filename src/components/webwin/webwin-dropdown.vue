@@ -2,14 +2,14 @@
     <div>
         <!-- 将背景移出ul，放在同级 -->
         <Transition>
-            <div v-if="show" class="dropdown-container">
-                <div class="dropdown_backgroud" @click="show = false"></div>
-                <ul class="dropdown">
+            <div v-if="show" class="webwin-dropdown-container">
+                <div class="webwin-dropdown_backgroud" @click="show = false"></div>
+                <ul class="webwin-dropdown">
                     <div style="height: 6px;"></div>
                     <div style="overflow: auto;height: calc( 100% - 240px );">
                         <li v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
                             @click="updateModelValue(idx)">
-                            <span class="label">{{ item.name }}</span>
+                            <span class="webwin-label">{{ item.name }}</span>
                         </li>
                     </div>
                     <div style="height: 6px;"></div>
@@ -21,7 +21,6 @@
 
 <script setup>
 import { ref } from 'vue'
-console.log(`%c✨Welcome to Web-Win-Vue-Item✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
 const props = defineProps({
     items: { type: Array, required: true },
 })
@@ -54,11 +53,11 @@ defineExpose({ showbox })
 </script>
 
 <style scoped>
-.dropdown-container {
+.webwin-dropdown-container {
     transform-origin: center;
 }
 
-.dropdown {
+.webwin-dropdown {
     z-index: 101;
     user-select: none;
     list-style: none;
@@ -71,20 +70,20 @@ defineExpose({ showbox })
     backdrop-filter: blur(12.5px);
     left: v-bind(x + 'px');
     top: v-bind(y + 'px');
-    border:2px solid #cdcdcd;
+    border: 2px solid #cdcdcd;
 }
 
-.dropdown_backgroud {
+.webwin-dropdown_backgroud {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0);
-    z-index: 100; 
+    z-index: 100;
 }
 
-.dropdown li {
+.webwin-dropdown li {
     height: 18px;
     position: relative;
     display: flex;
@@ -93,15 +92,15 @@ defineExpose({ showbox })
     transition: transform 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
 }
 
-.dropdown li:active {
+.webwin-dropdown li:active {
     transform: scale(0.975);
 }
 
-.dropdown li:hover {
+.webwin-dropdown li:hover {
     background: var(--sb-hover-bg, #cecece);
 }
 
-.label {
+.webwin-label {
     color: var(--sb-label-color, #333);
     white-space: nowrap;
     font-size: 16px;
@@ -124,4 +123,3 @@ defineExpose({ showbox })
     position: fixed;
 }
 </style>
-    

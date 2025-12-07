@@ -1,16 +1,16 @@
 <template>
-    <ul class="topappbar">
+    <ul class="webwin-topappbar">
         <KeepAlive>
             <li :is="activeComponent" v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
-                @click="updateLeft(idx)" class="topappbar-item">
-                <span class="topappbar-label">{{ item.name }}</span>
-                <span class="topappbar-indicator" v-if="idx === modelValue1"></span>
-                <span class="topappbar-indicator-not" v-if="idx != modelValue1"></span>
+                @click="updateLeft(idx)" class="webwin-topappbar-item">
+                <span class="webwin-topappbar-label">{{ item.name }}</span>
+                <span class="webwin-topappbar-indicator" v-if="idx === modelValue1"></span>
+                <span class="webwin-topappbar-indicator-not" v-if="idx != modelValue1"></span>
             </li>
         </KeepAlive>
-        <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="topappbar-item"
+        <li v-for="(rightMenu, idx) in rightMenus" :key="idx" @click="updateRight(idx)" class="webwin-topappbar-item"
             style="float: right;">
-            <span class="topappbar-label">{{ rightMenu.name }}</span>
+            <span class="webwin-topappbar-label">{{ rightMenu.name }}</span>
         </li>
     </ul>
 </template>
@@ -32,7 +32,7 @@ function updateRight(idx) {
 }
 </script>
 <style scoped>
-.topappbar {
+.webwin-topappbar {
     position: sticky;
     top: 0;
     user-select: none;
@@ -46,7 +46,7 @@ function updateRight(idx) {
     width: 100%;
 }
 
-.topappbar li {
+.webwin-topappbar li {
     transform-origin: center;
     position: relative;
     display: inline-block;
@@ -54,17 +54,17 @@ function updateRight(idx) {
     padding: 10px 15px 0 15px;
 }
 
-.topappbar .topappbar-item:hover {
+.webwin-topappbar .webwin-topappbar-item:hover {
     background: #cecece;
 }
 
-.topappbar-label {
+.webwin-topappbar-label {
     color: #333;
     white-space: nowrap;
     font-size: 16px;
 }
 
-.topappbar-indicator {
+.webwin-topappbar-indicator {
     height: 2.5px;
     background-color: #006fd0;
     width: 26px;
@@ -73,7 +73,7 @@ function updateRight(idx) {
     margin-top: 8px;
 }
 
-.topappbar-indicator-not {
+.webwin-topappbar-indicator-not {
     height: 2.5px;
     background-color: #006fd000;
     width: 26px;
@@ -83,21 +83,21 @@ function updateRight(idx) {
 }
 
 @media (prefers-color-scheme: dark) {
-    .topappbar {
+    .webwin-topappbar {
         background-color: #363636;
         color: #ffffff;
     }
 
-    .topappbar .topappbar-item:hover {
+    .webwin-topappbar .webwin-topappbar-item:hover {
         background: #252525;
         color: #ffffff;
     }
 
-    .topappbar-label {
+    .webwin-topappbar-label {
         color: #ffffff;
     }
 
-    .topappbar-indicator {
+    .webwin-topappbar-indicator {
         background-color: #4b99da;
     }
 }

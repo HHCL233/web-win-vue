@@ -1,5 +1,5 @@
 <style scoped>
-.uwpinput {
+.webwin-uwpinput {
     vertical-align: middle;
     display: inline-block;
     min-width: 300px;
@@ -14,20 +14,21 @@
     font-size: 16px;
 }
 
-.uwpinput:focus {
+.webwin-uwpinput:focus {
     outline: 2.75px solid #0078D4;
     outline-offset: -2.75px;
     background: rgb(255, 255, 255);
 }
 
-.uwpinput:disabled {
+.webwin-uwpinput:disabled {
     background-color: #CCCCCC;
     outline: 2.75px solid #CCCCCC;
     cursor: not-allowed;
     color: #7A7A7A
 }
+
 @media (prefers-color-scheme: dark) {
-    .uwpinput {
+    .webwin-uwpinput {
         color: rgb(145, 145, 145);
         background: var(--primary-color, rgb(0, 0, 0));
     }
@@ -35,11 +36,11 @@
 </style>
 
 <template>
-    <input type="text" name="fname" class="uwpinput" :value="value" :placeholder="placeholder1" @change="$emit('@change',$event)">
+    <input type="text" name="fname" class="webwin-uwpinput" :value="value" :placeholder="placeholder1"
+        @change="$emit('@change', $event)">
 </template>
 
 <script setup lang="ts">
-console.log(`%c✨Welcome to Web-Win-Vue-InputBox✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
 import { ref } from 'vue'
 const props = defineProps({ value: String, placeholder: String })
 const placeholder1 = ref(props.placeholder)

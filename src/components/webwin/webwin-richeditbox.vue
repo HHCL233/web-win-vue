@@ -1,5 +1,5 @@
 <style scoped>
-.uwprichrditbox {
+.webwin-uwprichrditbox {
     resize: none;
     vertical-align: middle;
     display: inline-block;
@@ -17,27 +17,28 @@
     font-size: 16px;
     vertical-align: top;
     white-space: pre-wrap;
-    
+
 }
 
-.uwprichrditbox:focus {
+.webwin-uwprichrditbox:focus {
     outline: 2.75px solid #0078D4;
     outline-offset: -2.75px;
 }
 
-.uwprichrditbox:disabled {
+.webwin-uwprichrditbox:disabled {
     background-color: #CCCCCC;
     outline: 2.75px solid #CCCCCC;
     cursor: not-allowed;
     color: #7A7A7A
 }
 
-.uwprichrditbox[data-placeholder]:empty:before {
+.webwin-uwprichrditbox[data-placeholder]:empty:before {
     content: attr(data-placeholder);
     color: rgb(102, 102, 102);
 }
+
 @media (prefers-color-scheme: dark) {
-    .uwprichrditbox {
+    .webwin-uwprichrditbox {
         color: rgb(145, 145, 145);
         background: var(--primary-color, rgb(0, 0, 0));
     }
@@ -45,22 +46,15 @@
 </style>
 
 <template>
-    <div
-        ref="editableDiv"
-        class="uwprichrditbox"
-        contenteditable="plaintext-only"
-        :data-placeholder="placeholder1"
-        @input="handleInput"
-        @focus="handleFocus"
-        @blur="handleBlur"
-    ></div>
+    <div ref="editableDiv" class="webwin-uwprichrditbox" contenteditable="plaintext-only"
+        :data-placeholder="placeholder1" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted } from 'vue'
 
-const props = defineProps({ 
-    value: { type: String, default: '' }, 
+const props = defineProps({
+    value: { type: String, default: '' },
     placeholder: { type: String, default: '' }
 })
 
@@ -79,10 +73,10 @@ onMounted(() => {
 
 const handleInput = (e: Event) => {
     if (!editableDiv.value) return
-    
+
     const text = editableDiv.value.textContent || ''
     emit('update', text)
-    
+
     nextTick(() => {
         if (editableDiv.value) {
             const range = document.createRange()
@@ -105,7 +99,7 @@ const handleFocus = (e: Event) => {
 const handleBlur = (e: Event) => {
     const target = e.target as HTMLElement
     const currentValue = target.textContent || ''
-    
+
     if (currentValue !== lastValue.value) {
         emit('change', {
             target: {
@@ -114,7 +108,7 @@ const handleBlur = (e: Event) => {
         })
         lastValue.value = currentValue
     }
-    
+
     if (currentValue.trim() === '') {
         target.textContent = ''
     }

@@ -1,13 +1,13 @@
 <template>
     <div style="position: relative;">
-        <div class="list-box-button" @click="showbox" :class="boxactive">{{ title }}</div>
+        <div class="webwin-list-box-button" @click="showbox" :class="boxactive">{{ title }}</div>
         <Transition>
-            <ul class="list-box" v-if="show">
+            <ul class="webwin-list-box" v-if="show">
                 <div style="height: 6px;"></div>
                 <div style="overflow: auto;height: calc( 100% - 240px );">
                     <li v-for="(item, idx) in items" :key="idx" :class="{ active: idx === modelValue1 }"
                         @click="updateModelValue(idx)">
-                        <span class="label">{{ item.name }}</span>
+                        <span class="webwin-label">{{ item.name }}</span>
                     </li>
                 </div>
                 <div style="height: 6px;"></div>
@@ -18,7 +18,6 @@
 
 <script setup>
 import { ref } from 'vue'
-console.log(`%c✨Welcome to Web-Win-Vue-Item✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
 const props = defineProps({
     items: { type: Array, required: true },
     modelValue: { type: Number, default: 0 },
@@ -52,7 +51,7 @@ function showbox() {
 </script>
 
 <style scoped>
-.list-box-button {
+.webwin-list-box-button {
     z-index: 10;
     height: 15px;
     position: relative;
@@ -64,7 +63,7 @@ function showbox() {
     background-color: white;
 }
 
-.list-box {
+.webwin-list-box {
     z-index: 1;
     transform-origin: 0 v-bind(top1+'px');
     user-select: none;
@@ -76,12 +75,12 @@ function showbox() {
     background-color: #ebebebf3;
     position: absolute;
     backdrop-filter: blur(12.5px);
-    
+
     box-shadow: 0 0 30px rgba(125, 125, 125, 0.75);
     top: v-bind(top+'px')
 }
 
-.list-box li {
+.webwin-list-box li {
     height: 15px;
     position: relative;
     display: flex;
@@ -90,28 +89,29 @@ function showbox() {
     transition: all 0.15s cubic-bezier(0.05, -0.01, 0.00, 1.00);
 }
 
-.list-box li:active {
+.webwin-list-box li:active {
     transform: scale(0.975);
 }
 
-.list-box li.active {
+.webwin-list-box li.active {
     background: var(--sb-hover-bg, #6db9f3);
     opacity: 0;
 }
 
-.list-box-button.active {
+.webwin-list-box-button.active {
     background: var(--sb-hover-bg, #6db9f3);
     box-shadow: 0px 0px 0px 2px #6db9f3 inset;
 }
 
-.list-box li:hover {
+.webwin-list-box li:hover {
     background: var(--sb-hover-bg, #cecece);
 }
 
-.list-box li.active:hover {
+.webwin-list-box li.active:hover {
     background: var(--sb-hover-bg, #6db9f3);
 }
-.label {
+
+.webwin-label {
     color: var(--sb-label-color, #333);
     white-space: nowrap;
     font-size: 16px;
