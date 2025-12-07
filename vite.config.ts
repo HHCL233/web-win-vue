@@ -133,7 +133,16 @@ export default defineConfig(({ command, mode }) => {
       lib: {
         entry: path.resolve(__dirname, "./src/components/webwin/index.ts"),
         name: "web-win-vue",
-        fileName: (format) => `web-win-vue.${format}`,
+        fileName: (format) => {
+          // 确保有 .js 扩展名
+          if (format === 'es') {
+            return 'web-win-vue.es.js'
+          }
+          if (format === 'umd') {
+            return 'web-win-vue.umd.js'
+          }
+          return `web-win-vue.${format}.js`
+        },
       },
       rollupOptions: {
         external: ["vue"],
