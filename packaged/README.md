@@ -45,8 +45,6 @@ import 'web-win-vue/web-win-vue.css'
 
 [![Star History Chart](https://api.star-history.com/svg?repos=HHCL233/web-win-vue&type=date&legend=top-left)](https://www.star-history.com/#HHCL233/web-win-vue&type=date&legend=top-left)
 
-![Star 进度](https://img.shields.io/github/stars/HHCL233/web-win-vue?label=Star%20目标&suffix=%20/ 1000&color=3498db&logo=github&style=progressbar)
-
 ## 许可证
 
 [MIT](https://github.com/HHCL233/web-win-vue/blob/main/LICENSE)
