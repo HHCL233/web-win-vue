@@ -3,11 +3,10 @@ import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync } from "fs";
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
-  // 如果是构建组件库模式
   const isLibBuild = command === 'build' && mode === 'lib';
 
   const config: any = {
@@ -21,13 +20,11 @@ export default defineConfig(({ command, mode }) => {
     },
   };
 
-  // 添加插件 - 开发和生产都需要 vue 和 devtools
   config.plugins = [
     vue(),
     vueDevTools(),
   ];
 
-  // 如果是构建组件库，添加打包配置和 package.json 生成
   if (isLibBuild) {
     config.plugins.push({
       name: "generate-package-json",
@@ -83,6 +80,21 @@ export default defineConfig(({ command, mode }) => {
           mkdirSync(outputDir, { recursive: true });
         }
 
+        // 🔥 复制 README.md 文件
+        const readmePath = path.resolve(__dirname, "README.md");
+        const readmeOutputPath = path.join(outputDir, "README.md");
+
+        if (existsSync(readmePath)) {
+          try {
+            copyFileSync(readmePath, readmeOutputPath);
+            console.log("✓ README.md copied to packaged/ directory");
+          } catch (error) {
+            console.error("✗ Failed to copy README.md:", (error as Error).message);
+          }
+        } else {
+          console.warn("⚠️ README.md not found in project root");
+        }
+
         // 写入 package.json 到 packaged 目录
         writeFileSync(
           path.join(outputDir, "package.json"),
@@ -134,7 +146,6 @@ export default defineConfig(({ command, mode }) => {
         entry: path.resolve(__dirname, "./src/components/webwin/index.ts"),
         name: "web-win-vue",
         fileName: (format) => {
-          // 确保有 .js 扩展名
           if (format === 'es') {
             return 'web-win-vue.es.js'
           }

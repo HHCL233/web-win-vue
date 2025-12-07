@@ -1,6 +1,6 @@
 {
   "name": "web-win-vue",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "基于 Vue3 开发的 Windows10 风格 Web 组件库",
   "main": "./web-win-vue.umd.js",
   "module": "./web-win-vue.es.js",
