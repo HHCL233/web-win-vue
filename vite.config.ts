@@ -41,10 +41,10 @@ export default defineConfig(({ command, mode }) => {
           name: "web-win-vue",
           version: rootPackage.version || "0.0.0",
           description: rootPackage.description || "基于 Vue3 开发的 Windows10 风格 Web 组件库",
-          main: "web-win-vue.umd.js",
-          module: "web-win-vue.es.js",
-          types: "web-win-vue.d.ts",
-          style: "style.css",
+          main: "./web-win-vue.umd.js",
+          module: "./web-win-vue.es.js",
+          types: "./web-win-vue.d.ts",
+          style: "./style.css",
           files: ["*.js", "*.d.ts", "*.css"],
           exports: {
             ".": {

@@ -1,6 +1,6 @@
 {
   "name": "vue-test",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "types": "src/components/webwin/index.ts",
   "style": "web-win-vue/css/index.css",
