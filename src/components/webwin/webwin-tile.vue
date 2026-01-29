@@ -18,83 +18,90 @@
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
 console.log(`%c✨Welcome to Web-Win-Vue-Tile✨`, "\n  color: #0078d7;\n  text-shadow: 0 1px 0 #0078d7;");
-export default {
-    props: {
-        size: { default: 'medium' },
-        color: { default: '#0078d7' },
-        title: { default: 'App' },
-        icon: { default: '' },
-        glowColor: { default: 'rgba(255,255,255,0.5)' },
-        glowRadius: { default: 60 }
-    },
-    data() {
-        return {
-            isHovered: false,
-            mouseX: 0,
-            mouseY: 0,
-            glowOpacity: 0
-        }
-    },
-    computed: {
-        tileStyle() {
-            return {
-                '--tile-color': this.color,
-                '--glow-color': this.glowColor,
-                '--glow-radius': `${this.glowRadius}px`
-            }
-        },
-        glowStyle() {
-            return {
-                '--x': `${this.mouseX}px`,
-                '--y': `${this.mouseY}px`,
-                opacity: this.glowOpacity
-            }
-        },
-        pointerGlowStyle() {
-            return {
-                '--x': `${this.mouseX}px`,
-                '--y': `${this.mouseY}px`,
-                opacity: this.isHovered ? 1 : 0
-            }
-        }
-    },
-    methods: {
-        handleMouseMove(e) {
-            const rect = e.currentTarget.getBoundingClientRect()
-            this.mouseX = e.clientX - rect.left
-            this.mouseY = e.clientY - rect.top
+import { ref, computed } from 'vue';
 
-            const minDistance = Math.min(
-                this.mouseX,
-                rect.width - this.mouseX,
-                this.mouseY,
-                rect.height - this.mouseY
-            )
-
-            const maxDistance = this.glowRadius
-            this.glowOpacity = Math.max(0, (maxDistance - minDistance) / maxDistance)
-        },
-        handleMouseLeave() {
-            this.isHovered = false
-            this.glowOpacity = 0
-        }
-    }
+interface Props {
+    size?: string;
+    color?: string;
+    title?: string;
+    icon?: string;
+    glowColor?: string;
+    glowRadius?: number;
 }
+
+const props = withDefaults(defineProps<Props>(), {
+    size: 'medium',
+    color: '#0078d7',
+    title: 'App',
+    icon: '',
+    glowColor: 'rgba(255,255,255,0.5)',
+    glowRadius: 60
+});
+
+const isHovered = ref(false);
+const mouseX = ref(0);
+const mouseY = ref(0);
+const glowOpacity = ref(0);
+
+const tileStyle = computed(() => {
+    return {
+        '--tile-color': props.color,
+        '--glow-color': props.glowColor,
+        '--glow-radius': `${props.glowRadius}px`
+    };
+});
+
+const glowStyle = computed(() => {
+    return {
+        '--x': `${mouseX.value}px`,
+        '--y': `${mouseY.value}px`,
+        opacity: glowOpacity.value
+    };
+});
+
+const pointerGlowStyle = computed(() => {
+    return {
+        '--x': `${mouseX.value}px`,
+        '--y': `${mouseY.value}px`,
+        opacity: isHovered.value ? 1 : 0
+    };
+});
+
+const handleMouseMove = (e: MouseEvent) => {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    mouseX.value = e.clientX - rect.left;
+    mouseY.value = e.clientY - rect.top;
+
+    const minDistance = Math.min(
+        mouseX.value,
+        rect.width - mouseX.value,
+        mouseY.value,
+        rect.height - mouseY.value
+    );
+
+    const maxDistance = props.glowRadius;
+    glowOpacity.value = Math.max(0, (maxDistance - minDistance) / maxDistance);
+};
+
+const handleMouseLeave = () => {
+    isHovered.value = false;
+    glowOpacity.value = 0;
+};
 </script>
 
 <style scoped>
 .webwin-tile {
     --tile-color: #0078d7;
-    --glow-color: rgba(255, 255, 255, 0.459);
+    --glow-color: rgb(0, 0, 0);
     --glow-radius: 20px;
 
     position: relative;
     background-color: var(--tile-color);
     color: rgb(255, 255, 255);
     overflow: hidden;
-    transition: all 0.25s cubic-bezier(0.78, 0.12, 0.00, 1.01);
+    transition: all 0.15s cubic-bezier(0.78, 0.12, 0.00, 1);
 }
 
 .webwin-tile.small {
@@ -171,15 +178,15 @@ export default {
     position: absolute;
     top: calc(var(--y) - 50px);
     left: calc(var(--x) - 50px);
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 60%;
     background: radial-gradient(circle,
             var(--glow-color) 0%,
             transparent 70%);
     pointer-events: none;
     z-index: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
 }
 
 .webwin-tile:active {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { winwindow, winnotifications, windropdown } from '../components/webwin';
+import type { winwindow, winnotifications, windropdown, wintile } from '../components/webwin';
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const childRef = ref<InstanceType<typeof winnotifications>>()
@@ -78,6 +78,7 @@ const menu = ref([
       aaaaaaaaaaaaaa
       aaaaaaaaaaaaaaaa<br>aaaaa</br>
       <winrange @change="console.log"></winrange>
+      <wintile>11</wintile>
     </div>
   </div>
   <winnotifications
