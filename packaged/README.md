@@ -26,6 +26,8 @@ npm install web-win-vue --save
 以下组件正在开发中，部分内容随时可能变动:
 
 - webwin-topappbar
+- webwin-listbox
+- webwin-listview
 
 Github Release 目前只会在 稳定版本 发布后推送。
 
@@ -35,10 +37,13 @@ Github Release 目前只会在 稳定版本 发布后推送。
 
 ```sh
 import { winbutton } from 'web-win-vue'
-import 'web-win-vue/web-win-vue.css'
+import 'web-win-vue/style.css'
 ```
 
-[详细文档](https://hhcl233.github.io/web-win-vue-docs/#/)   (不完整)。 
+文档目前暂未制作完成。
+
+<!-- [详细文档](https://hhcl233.github.io/web-win-vue-docs/#/) (不完整)。 -->
+
 <!-- 请参阅 [文档](https://ycnjvm44jtxm.feishu.cn/wiki/YmMCwDGo5iNeS3kTCEdchPaXnCe) 。 -->
 
 ## Star 历史
