@@ -1,6 +1,6 @@
 {
   "name": "web-win-vue",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "private": true,
   "types": "src/components/webwin/index.ts",
   "style": "web-win-vue/css/index.css",
