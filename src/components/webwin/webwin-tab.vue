@@ -1,6 +1,6 @@
 <script setup>
 import { watch, ref } from 'vue'
-import winitem from './webwin-item.vue'
+import winsidebar from './webwin-sidebar.vue'
 const props = defineProps({ menu: Array, url: Array, titlebar: Boolean, titlebartext: String })
 const activeIndex = ref(0)
 const docState = ref(0)
@@ -32,7 +32,7 @@ function update(val) {
 
 <template>
     <div class="webwin-container">
-        <winitem v-model="activeIndex" :items="menu" class="webwin-item-1" :bartitle="bartitle" @update="update" />
+        <winsidebar v-model="activeIndex" :items="menu" class="webwin-item-1" :bartitle="bartitle" @update="update" />
         <Transition name="fade" mode="out-in">
             <div v-if="docState === 0" key="state0" class="webwin-iframe-container" :class="folded">
                 <slot>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { winwindow, winnotifications, windropdown, wintile } from '../components/webwin';
+import type { wincontentdialog, winnotifications, windropdown, wintile, winsidebar } from '../components/webwin';
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const childRef = ref<InstanceType<typeof winnotifications>>()
-const window1 = ref<InstanceType<typeof winwindow>>()
+const window1 = ref<InstanceType<typeof wincontentdialog>>()
 const dropdown1 = ref<InstanceType<typeof windropdown>>()
 
 let menuVisible = ref(false)
@@ -73,12 +73,13 @@ const menu = ref([
       <winprogressbar :progress="progress5" />
       <winprogressbar :progress="progress6" />
       <winprogressbar :progress="progress7" />
-      <winwindow @clickBotton="console.log" ref="window1">这是web-win-vue的弹窗!(目前按钮安排了)</winwindow>
+      <wincontentdialog @clickBotton="console.log" ref="window1">这是web-win-vue的wincontentdialog!</wincontentdialog>
       <windropdown :items="[{ 'name': '刷新' }, { 'name': '显示设置' }, { 'name': '个性化' }]" ref="dropdown1"></windropdown>
       aaaaaaaaaaaaaa
       aaaaaaaaaaaaaaaa<br>aaaaa</br>
       <winrange @change="console.log"></winrange>
       <wintile>11</wintile>
+      <winsidebar></winsidebar>
     </div>
   </div>
   <winnotifications

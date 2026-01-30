@@ -41,7 +41,8 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
   width: 400px;
   height: 150px;
   background-color: rgba(20, 20, 20, 0.95);
-  transition: all 0.4s cubic-bezier(0.00, 0.6, 0.00, 1.00);
+  transition: transform 0.35s cubic-bezier(0.00, 0.6, 0.00, 1.00);
+  backdrop-filter: blur(8px);
 }
 
 .slide-fade-enter-active {
@@ -73,7 +74,8 @@ console.log(`%c✨Welcome to Web-Win-Vue-Notifications✨`, "\n  color: #0078d7;
 }
 
 .webwin-notification:hover {
-  border: #5f5f5f 4px solid;
+  outline: #464646 6px solid;
+  outline-offset: -6px;
 }
 
 .webwin-notification:active {

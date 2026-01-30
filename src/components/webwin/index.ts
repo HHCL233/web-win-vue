@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 import winbutton from './webwin-button.vue'
-import winitem from './webwin-item.vue'
+import winsidebar from './webwin-sidebar.vue'
 import wintile from './webwin-tile.vue'
 import wintab from './webwin-tab.vue'
 import wininputbox from './webwin-inputbox.vue'
@@ -11,21 +11,21 @@ import wincheckbox from './webwin-checkbox.vue'
 import winradio from './webwin-radio.vue'
 import wincombobox from './webwin-combobox.vue'
 import winprogressbar from './webwin-progressbar.vue'
-import winwindow from './webwin-window.vue'
+import wincontentdialog from './webwin-contentdialog.vue'
 import wincard from './webwin-card.vue'
 import windropdown from './webwin-dropdown.vue'
 import wintopappbar from './webwin-topappbar.vue'
 import winrange from './webwin-range.vue'
 
-export { winrange, wintopappbar, windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
+export { winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications };
 
-const component = [winrange, wintopappbar, windropdown, wincard, winwindow, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winitem, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
+const component = [winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications];
 
 const WebWin = {
     install(App: App) {
         component.forEach((item) => {
             App.component("winbutton", winbutton);
-            App.component("winitem", winitem);
+            App.component("winsidebar", winsidebar);
             App.component("wintile", wintile);
             App.component("wintab", wintab);
             App.component("wininputbox", wininputbox);
@@ -36,7 +36,7 @@ const WebWin = {
             App.component("winradio", winradio);
             App.component("wincombobox", wincombobox);
             App.component("winprogressbar", winprogressbar);
-            App.component("winwindow", winwindow);
+            App.component("wincontentdialog", wincontentdialog);
             App.component("wincard", wincard);
             App.component("windropdown", windropdown);
             App.component("wintopappbar", wintopappbar);

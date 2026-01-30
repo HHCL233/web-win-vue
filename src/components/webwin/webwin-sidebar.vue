@@ -23,9 +23,8 @@
         </svg>
         <span class="webwin-label" :class="fold"></span>
       </li>
-      <div style="width: var(--sb-width, 350px);margin: auto;">
-        <wininputbox placeholder="查找" class="webwin-inputbox"
-          style="margin-top: 6px;width: 320px;transition: all 0s ease;" :class="fold" />
+      <div style="width: 350px;margin: auto;">
+        <wininputbox placeholder="查找" class="webwin-inputbox" style="margin-top: 6px;width: 320px;" :class="fold" />
       </div>
       <h3 style="margin-top: 26px;margin-bottom: 26px;margin-left: 18px;" class="webwin-title" :class="fold">{{ title }}
       </h3>
@@ -96,8 +95,7 @@ function toggleFold() {
   margin: 0;
   padding: 0;
   width: 380px;
-  font-size: var(--sb-fs, 14px);
-  transition: width 0s cubic-bezier(0, 0.5, 0.00, 1.00);
+  font-size: 14px;
   overflow: hidden
 }
 
@@ -120,15 +118,11 @@ function toggleFold() {
   display: none;
 }
 
-.webwin-title {
-  transition: all 0s ease;
-}
-
 .webwin-side-bar li {
   position: relative;
   display: flex;
   align-items: center;
-  padding: var(--sb-pad, 10px 16px);
+  padding: 10px 16px;
 
 }
 
@@ -137,7 +131,7 @@ function toggleFold() {
 }
 
 .webwin-side-bar li:hover {
-  background: var(--sb-hover-bg, #cecece);
+  background: #cecece;
 }
 
 .webwin-label.folded {
@@ -150,8 +144,8 @@ function toggleFold() {
   top: 50%;
   margin-top: -12.5px;
   bottom: 0;
-  width: var(--sb-indicator-width, 3px);
-  background: var(--sb-indicator-color, #006fd0);
+  width: 3px;
+  background: #006fd0;
   transform: scaleY(0);
   height: 26px;
   line-height: 100px;
@@ -163,15 +157,15 @@ function toggleFold() {
 }
 
 .webwin-icon {
-  width: var(--sb-icon-size, 20px);
-  height: var(--sb-icon-size, 38px);
-  margin-right: var(--sb-icon-mr, 12px);
-  color: var(--sb-icon-color, #333);
+  width: 20px;
+  height: 38px;
+  margin-right: 12px;
+  color: #333;
   flex-shrink: 0;
 }
 
 .webwin-label {
-  color: var(--sb-label-color, #333);
+  color: #333;
   white-space: nowrap;
   font-size: 16px;
 }
@@ -182,22 +176,20 @@ function toggleFold() {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: var(--sb-width, 380px);
-    font-size: var(--sb-fs, 14px);
-    background: var(--sb-hover-bg, #1b1b1b);
+    width: 380px;
+    font-size: 14px;
+    background: #1b1b1b;
   }
 
   .webwin-side-bar li {
     position: relative;
     display: flex;
     align-items: center;
-    padding: var(--sb-pad, 10px 16px);
-    transition: background 0.2s;
-
+    padding: 10px 16px;
   }
 
   .webwin-side-bar li:hover {
-    background: var(--sb-hover-bg, #252525);
+    background: #252525;
   }
 
   .webwin-indicator {
@@ -206,8 +198,8 @@ function toggleFold() {
     top: 50%;
     margin-top: -12.5px;
     bottom: 0;
-    width: var(--sb-indicator-width, 3px);
-    background: var(--sb-indicator-color, #006fd0);
+    width: 3px;
+    background: #006fd0;
     transform: scaleY(0);
     height: 26px;
     line-height: 100px;
@@ -219,15 +211,15 @@ function toggleFold() {
   }
 
   .webwin-icon {
-    width: var(--sb-icon-size, 20px);
-    height: var(--sb-icon-size, 38px);
-    margin-right: var(--sb-icon-mr, 12px);
-    color: var(--sb-icon-color, #ffffff);
+    width: 20px;
+    height: 38px;
+    margin-right: 12px;
+    color: #ffffff;
     flex-shrink: 0;
   }
 
   .webwin-label {
-    color: var(--sb-label-color, #ffffff);
+    color: #ffffff;
     white-space: nowrap;
     font-size: 16px;
   }
