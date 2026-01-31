@@ -18,10 +18,11 @@ import wintopappbar from './webwin-topappbar.vue'
 import winrange from './webwin-range.vue'
 import winlistview from './webwin-listview.vue'
 import winlistbox from './webwin-listbox.vue'
+import winswitch from './webwin-switch.vue'
 
-export { winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications, winlistview, winlistbox };
+export { winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications, winlistview, winlistbox, winswitch };
 
-const component = [winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications, winlistview, winlistbox];
+const component = [winrange, wintopappbar, windropdown, wincard, wincontentdialog, winprogressbar, wincombobox, winradio, wincheckbox, winbutton, winsidebar, wintile, wintab, wininputbox, winpasswordbox, winricheditbox, winnotifications, winlistview, winlistbox, winswitch];
 
 const WebWin = {
     install(App: App) {
@@ -45,6 +46,7 @@ const WebWin = {
             App.component("winrange", winrange);
             App.component("winlistview", winlistview);
             App.component("winlistbox", winlistbox);
+            App.component("winswitch", winswitch);
         });
     },
 };

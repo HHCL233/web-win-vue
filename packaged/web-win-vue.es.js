@@ -1,36 +1,36 @@
-import { createElementBlock as d, openBlock as c, renderSlot as k, defineComponent as M, ref as u, normalizeClass as h, unref as w, createElementVNode as o, toDisplayString as g, createVNode as V, Fragment as $, renderList as C, computed as T, normalizeStyle as W, watch as ie, Transition as z, withCtx as S, createCommentVNode as I, withDirectives as N, vShow as H, onMounted as se, nextTick as ae, createBlock as D, vModelCheckbox as ce, vModelRadio as re, useCssVars as q, createTextVNode as ue, isRef as E, KeepAlive as de, mergeModels as pe, useModel as we, vModelText as ve } from "vue";
+import { createElementBlock as d, openBlock as a, renderSlot as C, defineComponent as k, ref as u, normalizeClass as h, unref as p, createElementVNode as o, toDisplayString as g, createVNode as V, Fragment as $, renderList as I, computed as T, normalizeStyle as W, watch as se, Transition as z, withCtx as S, createCommentVNode as M, withDirectives as N, vShow as H, onMounted as ae, nextTick as ce, createBlock as D, vModelCheckbox as re, vModelRadio as ue, useCssVars as O, createTextVNode as de, isRef as E, KeepAlive as we, mergeModels as pe, useModel as ve, vModelText as me } from "vue";
 const x = (e, s) => {
   const i = e.__vccOpts || e;
   for (const [t, n] of s)
     i[t] = n;
   return i;
-}, me = {}, be = { class: "webwin-button" };
-function _e(e, s) {
-  return c(), d("button", be, [
-    k(e.$slots, "default", {}, void 0, !0)
+}, be = {}, _e = { class: "webwin-button" };
+function fe(e, s) {
+  return a(), d("button", _e, [
+    C(e.$slots, "default", {}, void 0, !0)
   ]);
 }
-const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"]]), fe = ["value", "placeholder"], he = /* @__PURE__ */ M({
+const q = /* @__PURE__ */ x(be, [["render", fe], ["__scopeId", "data-v-a059307c"]]), he = ["value", "placeholder"], ge = /* @__PURE__ */ k({
   __name: "webwin-inputbox",
   props: { value: String, placeholder: String },
   setup(e) {
     const i = u(e.placeholder);
-    return (t, n) => (c(), d("input", {
+    return (t, n) => (a(), d("input", {
       type: "text",
       name: "fname",
       class: "webwin-uwpinput",
       value: e.value,
       placeholder: i.value,
-      onChange: n[0] || (n[0] = (a) => t.$emit("@change", a))
-    }, null, 40, fe));
+      onChange: n[0] || (n[0] = (c) => t.$emit("@change", c))
+    }, null, 40, he));
   }
-}), F = /* @__PURE__ */ x(he, [["__scopeId", "data-v-7641a566"]]), ge = { class: "webwin-sidebar-text" }, xe = { style: { width: "350px", margin: "auto" } }, ye = { style: { overflow: "auto", height: "calc( 100% - 240px )", "overflow-x": "hidden" } }, $e = ["onClick"], ke = {
+}), F = /* @__PURE__ */ x(ge, [["__scopeId", "data-v-7641a566"]]), xe = { class: "webwin-sidebar-text" }, ye = { style: { width: "350px", margin: "auto" } }, $e = { style: { overflow: "auto", height: "calc( 100% - 240px )", "overflow-x": "hidden" } }, ke = ["onClick"], Ce = {
   class: "webwin-icon",
   viewBox: "0 0 1024 1024",
   fill: "currentColor",
   "aria-hidden": "true",
   height: "16"
-}, Ce = ["d"], Ie = {
+}, Ie = ["d"], Me = {
   __name: "webwin-sidebar",
   props: {
     items: { type: Array, required: !0 },
@@ -45,13 +45,13 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
     function n() {
       t.value === "" ? (t.value = "folded", i("update", !1)) : (t.value = "", i("update", !0));
     }
-    return (a, l) => (c(), d("ul", {
-      class: h(["webwin-side-bar", w(t)])
+    return (c, l) => (a(), d("ul", {
+      class: h(["webwin-side-bar", p(t)])
     }, [
       o("div", {
-        class: h(["webwin-sidebar", w(t)])
+        class: h(["webwin-sidebar", p(t)])
       }, [
-        o("p", ge, g(e.bartitle), 1)
+        o("p", xe, g(e.bartitle), 1)
       ], 2),
       o("div", null, [
         o("li", {
@@ -71,12 +71,12 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
             })
           ], -1)),
           o("span", {
-            class: h(["webwin-label", w(t)])
+            class: h(["webwin-label", p(t)])
           }, null, 2)
         ]),
         o("li", {
           onClick: n,
-          class: h(["webwin-search-fold", w(t)])
+          class: h(["webwin-search-fold", p(t)])
         }, [
           l[1] || (l[1] = o("svg", {
             class: "webwin-icon",
@@ -91,46 +91,46 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
             })
           ], -1)),
           o("span", {
-            class: h(["webwin-label", w(t)])
+            class: h(["webwin-label", p(t)])
           }, null, 2)
         ], 2),
-        o("div", xe, [
+        o("div", ye, [
           V(F, {
             placeholder: "查找",
-            class: h(["webwin-inputbox", w(t)]),
+            class: h(["webwin-inputbox", p(t)]),
             style: { "margin-top": "6px", width: "320px" }
           }, null, 8, ["class"])
         ]),
         o("h3", {
           style: { "margin-top": "26px", "margin-bottom": "26px", "margin-left": "18px" },
-          class: h(["webwin-title", w(t)])
+          class: h(["webwin-title", p(t)])
         }, g(e.title), 3)
       ]),
-      o("div", ye, [
-        (c(!0), d($, null, C(e.items, (b, r) => (c(), d("li", {
+      o("div", $e, [
+        (a(!0), d($, null, I(e.items, (b, r) => (a(), d("li", {
           key: r,
           class: h({ active: r === e.modelValue }),
-          onClick: (m) => a.$emit("update:modelValue", r)
+          onClick: (m) => c.$emit("update:modelValue", r)
         }, [
           l[2] || (l[2] = o("span", { class: "webwin-indicator" }, null, -1)),
-          (c(), d("svg", ke, [
+          (a(), d("svg", Ce, [
             o("path", {
               d: b.icon
-            }, null, 8, Ce)
+            }, null, 8, Ie)
           ])),
           o("span", {
-            class: h(["webwin-label", w(t)])
+            class: h(["webwin-label", p(t)])
           }, g(b.name), 3)
-        ], 10, $e))), 128))
+        ], 10, ke))), 128))
       ])
     ], 2));
   }
-}, U = /* @__PURE__ */ x(Ie, [["__scopeId", "data-v-d1920b87"]]), Me = { class: "webwin-tile-content" }, Se = { class: "webwin-tile-icon" }, Ve = {
+}, U = /* @__PURE__ */ x(Me, [["__scopeId", "data-v-d1920b87"]]), Se = { class: "webwin-tile-content" }, Ve = { class: "webwin-tile-icon" }, Be = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   width: "24",
   height: "24"
-}, Be = ["d"], ze = { class: "webwin-tile-title" }, Ne = /* @__PURE__ */ M({
+}, ze = ["d"], Ne = { class: "webwin-tile-title" }, Re = /* @__PURE__ */ k({
   __name: "webwin-tile",
   props: {
     size: { default: "medium" },
@@ -144,50 +144,50 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
     console.log("%c✨Welcome to Web-Win-Vue-Tile✨", `
   color: #0078d7;
   text-shadow: 0 1px 0 #0078d7;`);
-    const s = e, i = u(!1), t = u(0), n = u(0), a = u(0), l = T(() => ({
+    const s = e, i = u(!1), t = u(0), n = u(0), c = u(0), l = T(() => ({
       "--tile-color": s.color,
       "--glow-color": s.glowColor,
       "--glow-radius": `${s.glowRadius}px`
     })), b = T(() => ({
       "--x": `${t.value}px`,
       "--y": `${n.value}px`,
-      opacity: a.value
+      opacity: c.value
     })), r = T(() => ({
       "--x": `${t.value}px`,
       "--y": `${n.value}px`,
       opacity: i.value ? 1 : 0
     })), m = (v) => {
-      const p = v.currentTarget.getBoundingClientRect();
-      t.value = v.clientX - p.left, n.value = v.clientY - p.top;
+      const w = v.currentTarget.getBoundingClientRect();
+      t.value = v.clientX - w.left, n.value = v.clientY - w.top;
       const f = Math.min(
         t.value,
-        p.width - t.value,
+        w.width - t.value,
         n.value,
-        p.height - n.value
+        w.height - n.value
       ), y = s.glowRadius;
-      a.value = Math.max(0, (y - f) / y);
+      c.value = Math.max(0, (y - f) / y);
     }, _ = () => {
-      i.value = !1, a.value = 0;
+      i.value = !1, c.value = 0;
     };
-    return (v, p) => (c(), d("div", {
+    return (v, w) => (a(), d("div", {
       class: h(["webwin-tile", e.size]),
       style: W(l.value),
       onMousemove: m,
-      onMouseenter: p[0] || (p[0] = (f) => i.value = !0),
+      onMouseenter: w[0] || (w[0] = (f) => i.value = !0),
       onMouseleave: _
     }, [
-      o("div", Me, [
-        o("div", Se, [
-          k(v.$slots, "icon", {}, () => [
-            (c(), d("svg", Ve, [
+      o("div", Se, [
+        o("div", Ve, [
+          C(v.$slots, "icon", {}, () => [
+            (a(), d("svg", Be, [
               o("path", {
                 fill: "white",
                 d: e.icon
-              }, null, 8, Be)
+              }, null, 8, ze)
             ]))
           ], !0)
         ]),
-        o("div", ze, g(e.title), 1)
+        o("div", Ne, g(e.title), 1)
       ]),
       o("div", {
         class: "webwin-glow-border",
@@ -199,25 +199,25 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
       }, null, 4)
     ], 38));
   }
-}), L = /* @__PURE__ */ x(Ne, [["__scopeId", "data-v-51adc759"]]), Re = { class: "webwin-container" }, We = ["src"], Te = ["src"], X = {
+}), L = /* @__PURE__ */ x(Re, [["__scopeId", "data-v-51adc759"]]), We = { class: "webwin-container" }, Te = ["src"], De = ["src"], j = {
   __name: "webwin-tab",
   props: { menu: Array, url: Array, titlebar: Boolean, titlebartext: String },
   setup(e) {
     const s = e, i = u(0), t = u(0), n = u(s.url[0]);
-    let a = u(""), l = u("");
-    s.titlebar ? a.value = s.titlebartext : a.value = "", ie(i, (r) => {
+    let c = u(""), l = u("");
+    s.titlebar ? c.value = s.titlebartext : c.value = "", se(i, (r) => {
       console.log("activeIndex changed:", r), console.log("new url:", s.url[r]), n.value = s.url[r], t.value = t.value === 0 ? 1 : 0, console.log("docState:", t.value);
     });
     function b(r) {
       r ? l.value = "" : l.value = "folded";
     }
-    return (r, m) => (c(), d("div", Re, [
+    return (r, m) => (a(), d("div", We, [
       V(U, {
         modelValue: i.value,
         "onUpdate:modelValue": m[0] || (m[0] = (_) => i.value = _),
         items: e.menu,
         class: "webwin-item-1",
-        bartitle: w(a),
+        bartitle: p(c),
         onUpdate: b
       }, null, 8, ["modelValue", "items", "bartitle"]),
       V(z, {
@@ -225,53 +225,53 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
         mode: "out-in"
       }, {
         default: S(() => [
-          t.value === 0 ? (c(), d("div", {
+          t.value === 0 ? (a(), d("div", {
             key: "state0",
-            class: h(["webwin-iframe-container", w(l)])
+            class: h(["webwin-iframe-container", p(l)])
           }, [
-            k(r.$slots, "default", {}, () => [
-              N(o("iframe", {
-                src: n.value,
-                style: { "margin-top": "70px" },
-                class: "webwin-iframe"
-              }, null, 8, We), [
-                [H, t.value === 0]
-              ])
-            ])
-          ], 2)) : t.value === 1 ? (c(), d("div", {
-            key: "state1",
-            class: h(["webwin-iframe-container", w(l)])
-          }, [
-            k(r.$slots, "default", {}, () => [
+            C(r.$slots, "default", {}, () => [
               N(o("iframe", {
                 src: n.value,
                 style: { "margin-top": "70px" },
                 class: "webwin-iframe"
               }, null, 8, Te), [
+                [H, t.value === 0]
+              ])
+            ])
+          ], 2)) : t.value === 1 ? (a(), d("div", {
+            key: "state1",
+            class: h(["webwin-iframe-container", p(l)])
+          }, [
+            C(r.$slots, "default", {}, () => [
+              N(o("iframe", {
+                src: n.value,
+                style: { "margin-top": "70px" },
+                class: "webwin-iframe"
+              }, null, 8, De), [
                 [H, t.value === 1]
               ])
             ])
-          ], 2)) : I("", !0)
+          ], 2)) : M("", !0)
         ]),
         _: 3
       })
     ]));
   }
-}, De = ["value", "placeholder"], qe = /* @__PURE__ */ M({
+}, Oe = ["value", "placeholder"], qe = /* @__PURE__ */ k({
   __name: "webwin-passwordbox",
   props: { value: String, placeholder: String },
   setup(e) {
     const s = e, i = u(s.value), t = u(s.placeholder);
-    return (n, a) => (c(), d("input", {
+    return (n, c) => (a(), d("input", {
       type: "password",
       name: "fname",
       class: "webwin-uwppassword",
       value: i.value,
       placeholder: t.value,
-      onChange: a[0] || (a[0] = (l) => n.$emit("@change", l))
-    }, null, 40, De));
+      onChange: c[0] || (c[0] = (l) => n.$emit("@change", l))
+    }, null, 40, Oe));
   }
-}), Y = /* @__PURE__ */ x(qe, [["__scopeId", "data-v-dd8b91fe"]]), Oe = ["data-placeholder"], Fe = /* @__PURE__ */ M({
+}), X = /* @__PURE__ */ x(qe, [["__scopeId", "data-v-dd8b91fe"]]), Fe = ["data-placeholder"], Ue = /* @__PURE__ */ k({
   __name: "webwin-richeditbox",
   props: {
     value: { type: String, default: "" },
@@ -279,51 +279,51 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
   },
   emits: ["update", "change"],
   setup(e, { emit: s }) {
-    const i = e, t = s, n = u(null), a = u(i.placeholder), l = u(i.value);
-    se(() => {
+    const i = e, t = s, n = u(null), c = u(i.placeholder), l = u(i.value);
+    ae(() => {
       n.value && (n.value.textContent = i.value || "", l.value = i.value || "");
     });
     const b = (_) => {
       if (!n.value) return;
       const v = n.value.textContent || "";
-      t("update", v), ae(() => {
+      t("update", v), ce(() => {
         if (n.value) {
-          const p = document.createRange(), f = window.getSelection();
-          p.selectNodeContents(n.value), p.collapse(!1), f?.removeAllRanges(), f?.addRange(p);
+          const w = document.createRange(), f = window.getSelection();
+          w.selectNodeContents(n.value), w.collapse(!1), f?.removeAllRanges(), f?.addRange(w);
         }
       });
     }, r = (_) => {
       const v = _.target;
       v.textContent === i.placeholder && (v.textContent = "");
     }, m = (_) => {
-      const v = _.target, p = v.textContent || "";
-      p !== l.value && (t("change", {
+      const v = _.target, w = v.textContent || "";
+      w !== l.value && (t("change", {
         target: {
-          value: p
+          value: w
         }
-      }), l.value = p), p.trim() === "" && (v.textContent = "");
+      }), l.value = w), w.trim() === "" && (v.textContent = "");
     };
-    return (_, v) => (c(), d("div", {
+    return (_, v) => (a(), d("div", {
       ref_key: "editableDiv",
       ref: n,
       class: "webwin-uwprichrditbox",
       contenteditable: "plaintext-only",
-      "data-placeholder": a.value,
+      "data-placeholder": c.value,
       onInput: b,
       onFocus: r,
       onBlur: m
-    }, null, 40, Oe));
+    }, null, 40, Fe));
   }
-}), j = /* @__PURE__ */ x(Fe, [["__scopeId", "data-v-f7a96b3a"]]), Ue = ["src"], He = {
+}), Y = /* @__PURE__ */ x(Ue, [["__scopeId", "data-v-f7a96b3a"]]), He = ["src"], Ee = {
   class: "webwin-n-name",
   style: { display: "inline-block", "margin-left": "6px" }
-}, Ee = { class: "webwin-n-text webwin-n-title" }, Le = { class: "webwin-n-vulua" }, Xe = {
+}, Le = { class: "webwin-n-text webwin-n-title" }, je = { class: "webwin-n-vulua" }, Xe = {
   __name: "webwin-notifications",
   props: { name: String, title: String, text: String, img: String },
   setup(e, { expose: s }) {
     const i = e;
     let t = u(!1), n = u(i.img);
-    const a = () => {
+    const c = () => {
       t.value = !t.value;
     };
     function l() {
@@ -331,79 +331,79 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
         t.value = !1;
       }, 250);
     }
-    return s({ showNotification: a }), console.log("%c✨Welcome to Web-Win-Vue-Notifications✨", `
+    return s({ showNotification: c }), console.log("%c✨Welcome to Web-Win-Vue-Notifications✨", `
   color: #0078d7;
-  text-shadow: 0 1px 0 #0078d7;`), (b, r) => (c(), D(z, { name: "slide-fade" }, {
+  text-shadow: 0 1px 0 #0078d7;`), (b, r) => (a(), D(z, { name: "slide-fade" }, {
       default: S(() => [
-        w(t) ? (c(), d("div", {
+        p(t) ? (a(), d("div", {
           key: 0,
           class: "webwin-notification",
           onClick: l
         }, [
           o("img", {
-            src: w(n),
+            src: p(n),
             style: { "object-fit": "contain", "margin-left": "16px", "margin-right": "0px", display: "inline-block", "vertical-align": "middle", width: "16px", height: "16px" }
-          }, null, 8, Ue),
-          o("p", He, g(e.name), 1),
-          o("h4", Ee, g(e.title), 1),
-          o("p", Le, g(e.text), 1)
-        ])) : I("", !0)
+          }, null, 8, He),
+          o("p", Ee, g(e.name), 1),
+          o("h4", Le, g(e.title), 1),
+          o("p", je, g(e.text), 1)
+        ])) : M("", !0)
       ]),
       _: 1
     }));
   }
-}, G = /* @__PURE__ */ x(Xe, [["__scopeId", "data-v-445b06e9"]]), Ye = ["name", "id"], je = ["for"], Ge = /* @__PURE__ */ M({
+}, G = /* @__PURE__ */ x(Xe, [["__scopeId", "data-v-445b06e9"]]), Ye = ["name", "id"], Ge = ["for"], Ke = /* @__PURE__ */ k({
   __name: "webwin-checkbox",
   props: { name: String, checked: Array },
   setup(e) {
     const s = e, i = u(s.name), t = u(s.checked);
-    return (n, a) => (c(), d($, null, [
+    return (n, c) => (a(), d($, null, [
       N(o("input", {
         type: "checkbox",
         class: "webwin-checkbox",
         name: i.value,
         id: i.value,
-        "onUpdate:modelValue": a[0] || (a[0] = (l) => t.value = l),
-        onClick: a[1] || (a[1] = (l) => n.$emit("click", l))
+        "onUpdate:modelValue": c[0] || (c[0] = (l) => t.value = l),
+        onClick: c[1] || (c[1] = (l) => n.$emit("click", l))
       }, null, 8, Ye), [
-        [ce, t.value]
+        [re, t.value]
       ]),
       o("label", {
         for: i.value,
         class: "webwin-checkbox-label"
       }, [
-        k(n.$slots, "default", {}, void 0, !0)
-      ], 8, je)
+        C(n.$slots, "default", {}, void 0, !0)
+      ], 8, Ge)
     ], 64));
   }
-}), K = /* @__PURE__ */ x(Ge, [["__scopeId", "data-v-3b234b99"]]), Ke = ["name", "id"], Je = ["for"], Pe = /* @__PURE__ */ M({
+}), K = /* @__PURE__ */ x(Ke, [["__scopeId", "data-v-3b234b99"]]), Je = ["name", "id"], Pe = ["for"], Qe = /* @__PURE__ */ k({
   __name: "webwin-radio",
   props: { name: String, checked: Array },
   setup(e) {
     const s = e, i = u(s.name), t = u(s.checked);
-    return (n, a) => (c(), d($, null, [
+    return (n, c) => (a(), d($, null, [
       N(o("input", {
         type: "radio",
         class: "webwin-radio",
         name: i.value,
         id: i.value,
-        "onUpdate:modelValue": a[0] || (a[0] = (l) => t.value = l),
-        onClick: a[1] || (a[1] = (l) => n.$emit("click", l))
-      }, null, 8, Ke), [
-        [re, t.value]
+        "onUpdate:modelValue": c[0] || (c[0] = (l) => t.value = l),
+        onClick: c[1] || (c[1] = (l) => n.$emit("click", l))
+      }, null, 8, Je), [
+        [ue, t.value]
       ]),
       o("label", {
         for: i.value,
         class: "webwin-radio-label"
       }, [
-        k(n.$slots, "default", {}, void 0, !0)
-      ], 8, Je)
+        C(n.$slots, "default", {}, void 0, !0)
+      ], 8, Pe)
     ], 64));
   }
-}), J = /* @__PURE__ */ x(Pe, [["__scopeId", "data-v-04fe95c4"]]), Qe = { style: { position: "relative" } }, Ze = {
+}), J = /* @__PURE__ */ x(Qe, [["__scopeId", "data-v-04fe95c4"]]), Ze = { style: { position: "relative" } }, Ae = {
   key: 0,
   class: "webwin-list-box"
-}, Ae = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, et = ["onClick"], tt = { class: "webwin-label" }, nt = {
+}, et = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, tt = ["onClick"], nt = { class: "webwin-label" }, lt = {
   __name: "webwin-combobox",
   props: {
     items: { type: Array, required: !0 },
@@ -412,65 +412,65 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
   },
   emits: ["update"],
   setup(e, { emit: s }) {
-    q((p) => ({
-      v1be24303: w(m) + "px",
-      v5172b45c: w(r) + "px"
+    O((w) => ({
+      v1be24303: p(m) + "px",
+      v5172b45c: p(r) + "px"
     }));
     const i = e, t = s;
-    let n = u(""), a = u(!1), l = u(i.modelValue), b = u(i.title), r = u(-6), m = u(6);
-    function _(p) {
-      a.value = !1, n.value = "", l.value = p, b.value = i.items[p].name, t("update", p), setTimeout(() => {
-        r.value = p * -35 - 6, m.value = p * 35 + 6;
+    let n = u(""), c = u(!1), l = u(i.modelValue), b = u(i.title), r = u(-6), m = u(6);
+    function _(w) {
+      c.value = !1, n.value = "", l.value = w, b.value = i.items[w].name, t("update", w), setTimeout(() => {
+        r.value = w * -35 - 6, m.value = w * 35 + 6;
       }, 100);
     }
     function v() {
-      a.value = !a.value, n.value = a.value ? "active" : "";
+      c.value = !c.value, n.value = c.value ? "active" : "";
     }
-    return (p, f) => (c(), d("div", Qe, [
+    return (w, f) => (a(), d("div", Ze, [
       o("div", {
-        class: h(["webwin-list-box-button", w(n)]),
+        class: h(["webwin-list-box-button", p(n)]),
         onClick: v
-      }, g(w(b)), 3),
+      }, g(p(b)), 3),
       V(z, null, {
         default: S(() => [
-          w(a) ? (c(), d("ul", Ze, [
+          p(c) ? (a(), d("ul", Ae, [
             f[0] || (f[0] = o("div", { style: { height: "6px" } }, null, -1)),
-            o("div", Ae, [
-              (c(!0), d($, null, C(e.items, (y, B) => (c(), d("li", {
+            o("div", et, [
+              (a(!0), d($, null, I(e.items, (y, B) => (a(), d("li", {
                 key: B,
-                class: h({ active: B === w(l) }),
+                class: h({ active: B === p(l) }),
                 onClick: (R) => _(B)
               }, [
-                o("span", tt, g(y.name), 1)
-              ], 10, et))), 128))
+                o("span", nt, g(y.name), 1)
+              ], 10, tt))), 128))
             ]),
             f[1] || (f[1] = o("div", { style: { height: "6px" } }, null, -1))
-          ])) : I("", !0)
+          ])) : M("", !0)
         ]),
         _: 1
       })
     ]));
   }
-}, P = /* @__PURE__ */ x(nt, [["__scopeId", "data-v-ac4b4002"]]), lt = { class: "webwin-progress-bar" }, ot = {
+}, P = /* @__PURE__ */ x(lt, [["__scopeId", "data-v-ac4b4002"]]), ot = { class: "webwin-progress-bar" }, it = {
   __name: "webwin-progressbar",
   props: {
     progress: { type: Number, default: 0 }
   },
   setup(e) {
-    return (s, i) => (c(), d("div", lt, [
+    return (s, i) => (a(), d("div", ot, [
       o("div", {
         class: "webwin-progress",
         style: W({ width: e.progress + "%" })
       }, null, 4)
     ]));
   }
-}, Q = /* @__PURE__ */ x(ot, [["__scopeId", "data-v-9ef8a457"]]), it = {
+}, Q = /* @__PURE__ */ x(it, [["__scopeId", "data-v-9ef8a457"]]), st = {
   key: 0,
   class: "webwin-window-background"
-}, st = {
+}, at = {
   key: 0,
   class: "webwin-window"
-}, at = { style: { "margin-top": "24px", "margin-bottom": "24px" } }, ct = { class: "webwin-window-title" }, rt = { style: { "margin-left": "25px", "margin-right": "24px", width: "calc(100% - 48px)" } }, ut = { style: { "margin-left": "24px", "margin-right": "24px", width: "calc(100% - 48px)", display: "Flex", gap: "6px", "margin-top": "48px" } }, dt = {
+}, ct = { style: { "margin-top": "24px", "margin-bottom": "24px" } }, rt = { class: "webwin-window-title" }, ut = { style: { "margin-left": "25px", "margin-right": "24px", width: "calc(100% - 48px)" } }, dt = { style: { "margin-left": "24px", "margin-right": "24px", width: "calc(100% - 48px)", display: "Flex", gap: "6px", "margin-top": "48px" } }, wt = {
   __name: "webwin-contentdialog",
   props: {
     items: { type: Array, required: !0, default: [{ text: "11" }, { text: "11" }] },
@@ -479,143 +479,143 @@ const O = /* @__PURE__ */ x(me, [["render", _e], ["__scopeId", "data-v-a059307c"
   emits: ["clickBotton"],
   setup(e, { expose: s, emit: i }) {
     let t = u("");
-    const n = i, a = () => {
+    const n = i, c = () => {
       t.value = !0;
     };
     function l(b) {
       t.value = !1, n("clickBotton", b);
     }
-    return s({ showDialog: a }), (b, r) => (c(), d($, null, [
+    return s({ showDialog: c }), (b, r) => (a(), d($, null, [
       V(z, null, {
         default: S(() => [
-          w(t) ? (c(), d("div", it)) : I("", !0)
+          p(t) ? (a(), d("div", st)) : M("", !0)
         ]),
         _: 1
       }),
       V(z, null, {
         default: S(() => [
-          w(t) ? (c(), d("div", st, [
-            o("div", at, [
-              o("h2", ct, g(e.title), 1),
-              o("div", rt, [
-                k(b.$slots, "default", {}, void 0, !0)
-              ]),
+          p(t) ? (a(), d("div", at, [
+            o("div", ct, [
+              o("h2", rt, g(e.title), 1),
               o("div", ut, [
-                (c(!0), d($, null, C(e.items, (m, _) => (c(), D(O, {
+                C(b.$slots, "default", {}, void 0, !0)
+              ]),
+              o("div", dt, [
+                (a(!0), d($, null, I(e.items, (m, _) => (a(), D(q, {
                   class: "webwin-window-button",
                   key: _,
                   onClick: (v) => l(_)
                 }, {
                   default: S(() => [
-                    ue(g(m.text), 1)
+                    de(g(m.text), 1)
                   ]),
                   _: 2
                 }, 1032, ["onClick"]))), 128))
               ])
             ])
-          ])) : I("", !0)
+          ])) : M("", !0)
         ]),
         _: 3
       })
     ], 64));
   }
-}, Z = /* @__PURE__ */ x(dt, [["__scopeId", "data-v-e4bb637e"]]), pt = {}, wt = { class: "webwin-card" };
-function vt(e, s) {
-  return c(), d("div", wt, [
-    k(e.$slots, "default", {}, void 0, !0)
+}, Z = /* @__PURE__ */ x(wt, [["__scopeId", "data-v-e4bb637e"]]), pt = {}, vt = { class: "webwin-card" };
+function mt(e, s) {
+  return a(), d("div", vt, [
+    C(e.$slots, "default", {}, void 0, !0)
   ]);
 }
-const A = /* @__PURE__ */ x(pt, [["render", vt], ["__scopeId", "data-v-26a8c2e0"]]), mt = {
+const A = /* @__PURE__ */ x(pt, [["render", mt], ["__scopeId", "data-v-26a8c2e0"]]), bt = {
   key: 0,
   class: "webwin-dropdown-container"
-}, bt = { class: "webwin-dropdown" }, _t = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, ft = ["onClick"], ht = { class: "webwin-label" }, gt = {
+}, _t = { class: "webwin-dropdown" }, ft = { style: { overflow: "auto", height: "calc( 100% - 240px )" } }, ht = ["onClick"], gt = { class: "webwin-label" }, xt = {
   __name: "webwin-dropdown",
   props: {
     items: { type: Array, required: !0 }
   },
   emits: ["update"],
   setup(e, { expose: s, emit: i }) {
-    q((f) => ({
-      v08042082: w(a) + "px",
-      v6fe54d61: w(l) + "px"
+    O((f) => ({
+      v08042082: p(c) + "px",
+      v6fe54d61: p(l) + "px"
     }));
     const t = e, n = i;
-    let a = u(0), l = u(0), b = u(""), r = u(!1), m = u(0), _ = u(t.title || "");
+    let c = u(0), l = u(0), b = u(""), r = u(!1), m = u(0), _ = u(t.title || "");
     function v(f) {
       r.value = !1, b.value = "", m.value = f, _.value = t.items[f].name, n("update", f);
     }
     return s({ showbox: (f, y) => {
-      r.value = !r.value, b.value = r.value ? "active" : "", a.value = f, l.value = y;
-    } }), (f, y) => (c(), d("div", null, [
+      r.value = !r.value, b.value = r.value ? "active" : "", c.value = f, l.value = y;
+    } }), (f, y) => (a(), d("div", null, [
       V(z, null, {
         default: S(() => [
-          w(r) ? (c(), d("div", mt, [
+          p(r) ? (a(), d("div", bt, [
             o("div", {
               class: "webwin-dropdown_backgroud",
               onClick: y[0] || (y[0] = (B) => E(r) ? r.value = !1 : r = !1)
             }),
-            o("ul", bt, [
+            o("ul", _t, [
               y[1] || (y[1] = o("div", { style: { height: "6px" } }, null, -1)),
-              o("div", _t, [
-                (c(!0), d($, null, C(e.items, (B, R) => (c(), d("li", {
+              o("div", ft, [
+                (a(!0), d($, null, I(e.items, (B, R) => (a(), d("li", {
                   key: R,
-                  class: h({ active: R === w(m) }),
-                  onClick: (Tt) => v(R)
+                  class: h({ active: R === p(m) }),
+                  onClick: (Ot) => v(R)
                 }, [
-                  o("span", ht, g(B.name), 1)
-                ], 10, ft))), 128))
+                  o("span", gt, g(B.name), 1)
+                ], 10, ht))), 128))
               ]),
               y[2] || (y[2] = o("div", { style: { height: "6px" } }, null, -1))
             ])
-          ])) : I("", !0)
+          ])) : M("", !0)
         ]),
         _: 1
       })
     ]));
   }
-}, ee = /* @__PURE__ */ x(gt, [["__scopeId", "data-v-2d220786"]]), xt = { class: "webwin-topappbar" }, yt = ["is", "onClick"], $t = { class: "webwin-topappbar-label" }, kt = {
+}, ee = /* @__PURE__ */ x(xt, [["__scopeId", "data-v-2d220786"]]), yt = { class: "webwin-topappbar" }, $t = ["is", "onClick"], kt = { class: "webwin-topappbar-label" }, Ct = {
   key: 0,
   class: "webwin-topappbar-indicator"
-}, Ct = {
+}, It = {
   key: 1,
   class: "webwin-topappbar-indicator-not"
-}, It = ["onClick"], Mt = { class: "webwin-topappbar-label" }, St = {
+}, Mt = ["onClick"], St = { class: "webwin-topappbar-label" }, Vt = {
   __name: "webwin-topappbar",
   props: { items: Array, activeIndex: Number, rightMenu: { type: Array, default: [] } },
   emits: ["update"],
   setup(e, { emit: s }) {
     const i = s, t = e;
-    let n = u(t.activeIndex || 0), a = u(t.items), l = u(t.rightMenu);
+    let n = u(t.activeIndex || 0), c = u(t.items), l = u(t.rightMenu);
     function b(m) {
       n.value = m, i("update", [m, "left"]);
     }
     function r(m) {
       i("update", [m, "right"]);
     }
-    return (m, _) => (c(), d("ul", xt, [
-      (c(), D(de, null, [
-        (c(!0), d($, null, C(w(a), (v, p) => (c(), d("li", {
+    return (m, _) => (a(), d("ul", yt, [
+      (a(), D(we, null, [
+        (a(!0), d($, null, I(p(c), (v, w) => (a(), d("li", {
           is: m.activeComponent,
-          key: p,
-          class: h([{ active: p === w(n) }, "webwin-topappbar-item"]),
-          onClick: (f) => b(p)
+          key: w,
+          class: h([{ active: w === p(n) }, "webwin-topappbar-item"]),
+          onClick: (f) => b(w)
         }, [
-          o("span", $t, g(v.name), 1),
-          p === w(n) ? (c(), d("span", kt)) : I("", !0),
-          p != w(n) ? (c(), d("span", Ct)) : I("", !0)
-        ], 10, yt))), 128))
+          o("span", kt, g(v.name), 1),
+          w === p(n) ? (a(), d("span", Ct)) : M("", !0),
+          w != p(n) ? (a(), d("span", It)) : M("", !0)
+        ], 10, $t))), 128))
       ], 1024)),
-      (c(!0), d($, null, C(w(l), (v, p) => (c(), d("li", {
-        key: p,
-        onClick: (f) => r(p),
+      (a(!0), d($, null, I(p(l), (v, w) => (a(), d("li", {
+        key: w,
+        onClick: (f) => r(w),
         class: "webwin-topappbar-item",
         style: { float: "right" }
       }, [
-        o("span", Mt, g(v.name), 1)
-      ], 8, It))), 128))
+        o("span", St, g(v.name), 1)
+      ], 8, Mt))), 128))
     ]));
   }
-}, te = /* @__PURE__ */ x(St, [["__scopeId", "data-v-ef60c98a"]]), Vt = {
+}, te = /* @__PURE__ */ x(Vt, [["__scopeId", "data-v-ef60c98a"]]), Bt = {
   __name: "webwin-range",
   props: /* @__PURE__ */ pe({
     color: { type: String, default: "#006fd0" }
@@ -625,21 +625,21 @@ const A = /* @__PURE__ */ x(pt, [["render", vt], ["__scopeId", "data-v-26a8c2e0"
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    q((i) => ({
+    O((i) => ({
       v23dfb612: e.color
     }));
-    let s = we(e, "modelValue");
-    return (i, t) => N((c(), d("input", {
+    let s = ve(e, "modelValue");
+    return (i, t) => N((a(), d("input", {
       type: "range",
       "onUpdate:modelValue": t[0] || (t[0] = (n) => E(s) ? s.value = n : s = n),
       class: "webwin-slider",
       min: "1",
       max: "100"
     }, null, 512)), [
-      [ve, w(s)]
+      [me, p(s)]
     ]);
   }
-}, ne = /* @__PURE__ */ x(Vt, [["__scopeId", "data-v-480ca2b0"]]), Bt = ["onClick"], zt = { class: "webwin-listview-context" }, le = /* @__PURE__ */ M({
+}, ne = /* @__PURE__ */ x(Bt, [["__scopeId", "data-v-480ca2b0"]]), zt = ["onClick"], Nt = { class: "webwin-listview-context" }, le = /* @__PURE__ */ k({
   __name: "webwin-listview",
   props: {
     items: {
@@ -653,20 +653,20 @@ const A = /* @__PURE__ */ x(pt, [["render", vt], ["__scopeId", "data-v-26a8c2e0"
   emits: ["update"],
   setup(e, { emit: s }) {
     const i = s, t = e, n = u("context");
-    let a = u(t.items || []);
+    let c = u(t.items || []);
     const l = u(t.activeIndex ?? [0]);
     function b(r) {
       console.log(1), t.isMultiple ? l.value.indexOf(r) !== -1 ? l.value = l.value.filter((_) => _ !== r) : l.value.push(r) : l.value = [r], i("update", l.value);
     }
-    return (r, m) => (c(!0), d($, null, C(w(a), (_, v) => (c(), d("div", {
+    return (r, m) => (a(!0), d($, null, I(p(c), (_, v) => (a(), d("div", {
       key: v,
       class: h([{ active: l.value.indexOf(v) != -1 }, "webwin-listview"]),
-      onClick: (p) => b(v)
+      onClick: (w) => b(v)
     }, [
-      o("div", zt, g(_[n.value]), 1)
-    ], 10, Bt))), 128));
+      o("div", Nt, g(_[n.value]), 1)
+    ], 10, zt))), 128));
   }
-}), Nt = ["onClick"], Rt = { class: "webwin-listbox-context" }, oe = /* @__PURE__ */ M({
+}), Rt = ["onClick"], Wt = { class: "webwin-listbox-context" }, oe = /* @__PURE__ */ k({
   __name: "webwin-listbox",
   props: {
     items: {
@@ -680,29 +680,43 @@ const A = /* @__PURE__ */ x(pt, [["render", vt], ["__scopeId", "data-v-26a8c2e0"
   emits: ["update"],
   setup(e, { emit: s }) {
     const i = s, t = e, n = u("context");
-    let a = u(t.items || []);
+    let c = u(t.items || []);
     const l = u(t.activeIndex ?? [0]);
     function b(r) {
       console.log(1), t.isMultiple ? l.value.indexOf(r) !== -1 ? l.value = l.value.filter((_) => _ !== r) : l.value.push(r) : l.value = [r], i("update", l.value);
     }
-    return (r, m) => (c(!0), d($, null, C(w(a), (_, v) => (c(), d("div", {
+    return (r, m) => (a(!0), d($, null, I(p(c), (_, v) => (a(), d("div", {
       key: v,
       class: h([{ active: l.value.indexOf(v) != -1 }, "webwin-listbox"]),
-      onClick: (p) => b(v)
+      onClick: (w) => b(v)
     }, [
-      o("div", Rt, g(_[n.value]), 1)
-    ], 10, Nt))), 128));
+      o("div", Wt, g(_[n.value]), 1)
+    ], 10, Rt))), 128));
   }
-}), Wt = [ne, te, ee, A, Z, Q, P, J, K, O, U, L, X, F, Y, j, G, le, oe], qt = {
+}), Tt = { class: "webwin-switch" }, ie = /* @__PURE__ */ k({
+  __name: "webwin-switch",
+  props: {
+    isOn: Boolean
+  },
+  setup(e) {
+    return (s, i) => (a(), d("label", Tt, [...i[0] || (i[0] = [
+      o("input", {
+        type: "checkbox",
+        class: "webwin-switch-checkbox"
+      }, null, -1),
+      o("span", { class: "webwin-switch-slider" }, null, -1)
+    ])]));
+  }
+}), Dt = [ne, te, ee, A, Z, Q, P, J, K, q, U, L, j, F, X, Y, G, le, oe, ie], Ft = {
   install(e) {
-    Wt.forEach((s) => {
-      e.component("winbutton", O), e.component("winsidebar", U), e.component("wintile", L), e.component("wintab", X), e.component("wininputbox", F), e.component("winpasswordbox", Y), e.component("winricheditbox", j), e.component("winnotifications", G), e.component("wincheckbox", K), e.component("winradio", J), e.component("wincombobox", P), e.component("winprogressbar", Q), e.component("wincontentdialog", Z), e.component("wincard", A), e.component("windropdown", ee), e.component("wintopappbar", te), e.component("winrange", ne), e.component("winlistview", le), e.component("winlistbox", oe);
+    Dt.forEach((s) => {
+      e.component("winbutton", q), e.component("winsidebar", U), e.component("wintile", L), e.component("wintab", j), e.component("wininputbox", F), e.component("winpasswordbox", X), e.component("winricheditbox", Y), e.component("winnotifications", G), e.component("wincheckbox", K), e.component("winradio", J), e.component("wincombobox", P), e.component("winprogressbar", Q), e.component("wincontentdialog", Z), e.component("wincard", A), e.component("windropdown", ee), e.component("wintopappbar", te), e.component("winrange", ne), e.component("winlistview", le), e.component("winlistbox", oe), e.component("winswitch", ie);
     });
   }
 };
 export {
-  qt as default,
-  O as winbutton,
+  Ft as default,
+  q as winbutton,
   A as wincard,
   K as wincheckbox,
   P as wincombobox,
@@ -712,13 +726,14 @@ export {
   oe as winlistbox,
   le as winlistview,
   G as winnotifications,
-  Y as winpasswordbox,
+  X as winpasswordbox,
   Q as winprogressbar,
   J as winradio,
   ne as winrange,
-  j as winricheditbox,
+  Y as winricheditbox,
   U as winsidebar,
-  X as wintab,
+  ie as winswitch,
+  j as wintab,
   L as wintile,
   te as wintopappbar
 };
