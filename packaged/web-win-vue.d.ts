@@ -6,7 +6,7 @@ declare module 'web-win-vue' {
   export const wintopappbar: any;
   export const windropdown: any;
   export const wincard: any;
-  export const winwindow: any;
+  export const wincontentdialog: any;
   export const winprogressbar: any;
   export const wincombobox: any;
   export const winradio: any;
@@ -19,6 +19,9 @@ declare module 'web-win-vue' {
   export const winpasswordbox: any;
   export const winricheditbox: any;
   export const winnotifications: any;
+  export const winswitch: any;
+  export const winlistview: any;
+  export const winlistbox: any;
   
   // 导出安装函数
   const WebWin: {

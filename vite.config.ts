@@ -111,7 +111,7 @@ export default defineConfig(({ command, mode }) => {
   export const wintopappbar: any;
   export const windropdown: any;
   export const wincard: any;
-  export const winwindow: any;
+  export const wincontentdialog: any;
   export const winprogressbar: any;
   export const wincombobox: any;
   export const winradio: any;
@@ -124,6 +124,9 @@ export default defineConfig(({ command, mode }) => {
   export const winpasswordbox: any;
   export const winricheditbox: any;
   export const winnotifications: any;
+  export const winswitch: any;
+  export const winlistview: any;
+  export const winlistbox: any;
   
   // 导出安装函数
   const WebWin: {
