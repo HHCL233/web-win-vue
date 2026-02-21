@@ -5,7 +5,8 @@ let show1 = ref('')
 const emit = defineEmits(['clickBotton'])
 defineProps({
     items: { type: Array, required: true, default: [{ 'text': '11' }, { 'text': '11' }] },
-    title: { type: String, default: 'Title' }
+    title: { type: String, default: 'Title' },
+    content: { type: String, default: 'Content' }
 })
 const showDialog = () => {
     show1.value = true
@@ -24,8 +25,7 @@ defineExpose({ showDialog })
         <div class="webwin-window" v-if="show1">
             <div style="margin-top: 24px; margin-bottom: 24px;">
                 <h2 class="webwin-window-title">{{ title }}</h2>
-                <div style="margin-left: 25px;margin-right: 24px;width: calc(100% - 48px);">
-                    <slot></slot>
+                <div style="margin-left: 25px;margin-right: 24px;width: calc(100% - 48px);" v-html="content">
                 </div>
                 <div
                     style="margin-left: 24px;margin-right: 24px;width: calc(100% - 48px);display: Flex;gap: 6px;margin-top: 48px;">
